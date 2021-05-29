@@ -15,75 +15,63 @@ namespace Sistema_HES
         public bool Ini_Sesion(string ci, string contraseña,Label LblError)     //funcion que verifica en las tablas correspondientes si dicho usuario y contraseña son correctos o si existen
         {
             StreamWriter archivo = new StreamWriter(@"Rol.txt");    //abre un archivo en stream para escribir dentro mas adelante
-            //se hace la consulta primero a la tabla de usuarios, por si sea un paciente
-            string query = "select contraseña from usuarios where ci="+ci+";";
+            DataTable tabla = new DataTable();
+            MySqlDataAdapter adaptador;
+            string query = "select contraseña from usuarios where ci="+ci+";";      //se hace la consulta primero a la tabla de usuarios, por si sea un paciente
             MySqlCommand comando = new MySqlCommand(query, conexion);
             try
             {
                 conexion.Open();    //se abre la conexion
-                MySqlDataReader lector = comando.ExecuteReader();   //se ejecuta el comando y se crea un lector de datos
+                adaptador = new MySqlDataAdapter(comando);      //se encarga de ejecutar la consulta y obtener de vuelta el valor que estamos buscando
                 conexion.Close();   //se cierra la conexion
-                MessageBox.Show(query);
-                if (lector.HasRows)  //si tiene filas hacer...
+                adaptador.Fill(tabla);
+                if (tabla.Rows.Count == 1)  //si recupero algun dato...
                 {
-                    while(lector.Read())
-                     {
-                        if (contraseña == lector.GetString(0))
+                    if (tabla.Rows[0][0].ToString() == contraseña)  //si coinciden los datos...
+                    {
+                        archivo.WriteLine(ci + "paciente");
+                        return true;
+                    }
+                    else    //sino coinciden los datos
+                        LblError.Visible = true;
+                }
+                else    //si no recupero ningun dato
+                {
+                    query= "select contraseña from medico where ci=" + ci + ";";      //se hace la consulta a la tabla medico
+                    comando = new MySqlCommand(query, conexion);
+                    conexion.Open();    //se abre la conexion
+                    adaptador = new MySqlDataAdapter(comando);      //se encarga de ejecutar la consulta y obtener de vuelta el valor que estamos buscando
+                    conexion.Close();   //se cierra la conexion
+                    adaptador.Fill(tabla);
+                    if (tabla.Rows.Count == 1)  //si recupero algun dato...
+                    {
+                        if (tabla.Rows[0][0].ToString() == contraseña)  //si coinciden los datos...
                         {
-                            archivo.WriteLine("paciente;"+ci);
+                            archivo.WriteLine(ci + "medico");
                             return true;
                         }
-                        else
-                        {
+                        else    //sino coinciden los datos
                             LblError.Visible = true;
-                        }
-                     }
-                }
-                else    //si no tiene filas...
-                {
-                    query = "select contraseña from medico where ci=" + ci + ";";     //se crea una nueva consulta en la tabla medico
-                    comando = new MySqlCommand(query, conexion);     //se crea un nuevo comando de consulta
-                    conexion.Open();    //se abre la conexion
-                    lector = comando.ExecuteReader();   //se ejecuta el comando, el resultado se guarda en lector
-                    conexion.Close();   //se cierra la conexion
-                    if(lector.HasRows)      //si tiene filas hacer...
+                    }
+                    else    //si no recupero ningun dato
                     {
-                        while (lector.Read())
-                         {
-                            if (contraseña == lector.GetString(0))
+                        query = "select contraseña from admin where ci=" + ci + ";";      //se hace la consulta a la tabla medico
+                        comando = new MySqlCommand(query, conexion);
+                        conexion.Open();    //se abre la conexion
+                        adaptador = new MySqlDataAdapter(comando);      //se encarga de ejecutar la consulta y obtener de vuelta el valor que estamos buscando
+                        conexion.Close();   //se cierra la conexion
+                        adaptador.Fill(tabla);
+                        if (tabla.Rows.Count == 1)  //si recupero algun dato...
+                        {
+                            if (tabla.Rows[0][0].ToString() == contraseña)  //si coinciden los datos...
                             {
-                                archivo.WriteLine("medico;"+ci);
+                                archivo.WriteLine(ci + "admin");
                                 return true;
                             }
-                            else
-                            {
+                            else    //sino coinciden los datos
                                 LblError.Visible = true;
-                            }
-                         }
-                    }
-                    else    //si no tiene filas...
-                    {
-                        query = "select contraseña from admin where ci=" + ci + ";";     //se crea una nueva consulta para la tabla admin
-                        comando = new MySqlCommand(query, conexion);     //se crea un nuevo comando de consulta
-                        conexion.Open();    //se abre la conexion
-                        lector = comando.ExecuteReader();   //se ejecuta el comando y el resultado se guarda en lector
-                        conexion.Close();   //se cierra la conexion
-                        if(lector.HasRows)  //si tiene filas...
-                        {
-                            while (lector.Read())
-                            {
-                                if (contraseña == lector.GetString(0))
-                                {
-                                    archivo.WriteLine("admin;"+ci);
-                                    return true;
-                                }
-                                else
-                                {
-                                    LblError.Visible = true;
-                                }
-                             }
                         }
-                        else    //si no tiene filas...
+                        else    //si no recupero ningun dato
                         {
                             LblError.Visible = true;
                             return false;
@@ -128,38 +116,44 @@ namespace Sistema_HES
         public bool VerificarDato(string query)     //funcion que verifica si cierto dato existe en la base de datos
         {
             MySqlCommand comando = new MySqlCommand(query, conexion);
-            conexion.Open();
-            MySqlDataReader lector = comando.ExecuteReader();
-            conexion.Close();
-            if (lector.HasRows)
-            {
-                return true;
-                //while (lector.Read())
-                //{
-                //    dato = Convert.ToString(lector[0]);
-                //}
-            }
-            else
-                return false;
-                //MessageBox.Show("No se encotro ningun registro");
-            //conexion.Close();
-        }
-        public MySqlDataReader ObtenerDatos(string query)       //metodo que devuelve un dato de tipo DataReader, devolviendo una fila completa de datos
-        { 
-            MySqlCommand comando = new MySqlCommand(query, conexion);
-            MySqlDataReader lector = null;
+            DataTable tabla = new DataTable();
             try
             {
                 conexion.Open();
-                lector = comando.ExecuteReader();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
                 conexion.Close();
-                return lector;
+                adaptador.Fill(tabla);
+                if (tabla.Rows.Count == 1)
+                {
+                    return true;
+                }
+                else
+                    return false;
             }
             catch(MySqlException ex)
             {
                 MessageBox.Show(ex.Message);
                 conexion.Close();
-                return lector;
+            }
+            return false;
+        }
+        public DataTable ObtenerDatos(string query)       //metodo que devuelve un dato de tipo DataReader, devolviendo una fila completa de datos
+        { 
+            MySqlCommand comando = new MySqlCommand(query, conexion);
+            DataTable tabla = new DataTable();
+            try
+            {
+                conexion.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                conexion.Close();
+                adaptador.Fill(tabla);
+                return tabla;
+            }
+            catch(MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                conexion.Close();
+                return null;
             }
         }
     }

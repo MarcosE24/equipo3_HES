@@ -135,6 +135,7 @@ namespace Sistema_HES
             this.BtnCerrar.TabIndex = 29;
             this.BtnCerrar.Text = "Cerrar";
             this.BtnCerrar.UseVisualStyleBackColor = true;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // BtnEditar
             // 
@@ -261,6 +262,7 @@ namespace Sistema_HES
             this.Controls.Add(this.label1);
             this.Name = "ModificarUsuario";
             this.Text = "ModificarUsuario";
+            this.Load += new System.EventHandler(this.ModificarUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

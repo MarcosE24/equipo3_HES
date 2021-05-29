@@ -44,6 +44,7 @@ namespace Sistema_HES
             this.label7 = new System.Windows.Forms.Label();
             this.TbxConsultar = new System.Windows.Forms.TextBox();
             this.TbxDescripcion = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.SuspendLayout();
             // 
             // TbxCi
@@ -178,11 +179,18 @@ namespace Sistema_HES
             this.TbxDescripcion.Size = new System.Drawing.Size(212, 113);
             this.TbxDescripcion.TabIndex = 14;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(453, 271);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 16;
+            // 
             // Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 450);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.TbxDescripcion);
             this.Controls.Add(this.TbxConsultar);
             this.Controls.Add(this.label7);
@@ -222,5 +230,6 @@ namespace Sistema_HES
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TbxConsultar;
         private System.Windows.Forms.TextBox TbxDescripcion;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

@@ -12,7 +12,6 @@ namespace Sistema_HES
 
         private void BtnEntrar_Click(object sender, System.EventArgs e)
         {
-
             if (conexion.Ini_Sesion(TbxCi.Text, TbxContraseña.Text, LblError))
             {
                 Inicio inicio = new Inicio();

@@ -10,7 +10,6 @@ namespace Sistema_HES
         {
             InitializeComponent();
         }
-
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
             if (conexion.VerificarDato("select * from usuarios where ci=" + TbxCi.Text) == false)
