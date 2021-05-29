@@ -41,27 +41,27 @@ namespace Sistema_HES
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 18);
+            this.label1.Size = new System.Drawing.Size(106, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Documento N°:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(29, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 18);
+            this.label2.Size = new System.Drawing.Size(87, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña:";
             // 
             // LblRegistrar
             // 
             this.LblRegistrar.AutoSize = true;
-            this.LblRegistrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRegistrar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblRegistrar.Location = new System.Drawing.Point(122, 265);
             this.LblRegistrar.Name = "LblRegistrar";
             this.LblRegistrar.Size = new System.Drawing.Size(87, 18);
@@ -71,7 +71,7 @@ namespace Sistema_HES
             // 
             // BtnEntrar
             // 
-            this.BtnEntrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEntrar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEntrar.Location = new System.Drawing.Point(95, 152);
             this.BtnEntrar.Name = "BtnEntrar";
             this.BtnEntrar.Size = new System.Drawing.Size(159, 45);
@@ -82,23 +82,23 @@ namespace Sistema_HES
             // 
             // TbxCi
             // 
-            this.TbxCi.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbxCi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbxCi.Location = new System.Drawing.Point(133, 46);
             this.TbxCi.Name = "TbxCi";
-            this.TbxCi.Size = new System.Drawing.Size(186, 26);
+            this.TbxCi.Size = new System.Drawing.Size(186, 24);
             this.TbxCi.TabIndex = 4;
             // 
             // TbxContraseña
             // 
-            this.TbxContraseña.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbxContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbxContraseña.Location = new System.Drawing.Point(133, 86);
             this.TbxContraseña.Name = "TbxContraseña";
-            this.TbxContraseña.Size = new System.Drawing.Size(186, 26);
+            this.TbxContraseña.Size = new System.Drawing.Size(186, 24);
             this.TbxContraseña.TabIndex = 5;
             // 
             // LblError
             // 
-            this.LblError.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblError.ForeColor = System.Drawing.Color.Red;
             this.LblError.Location = new System.Drawing.Point(19, 214);
             this.LblError.Name = "LblError";
