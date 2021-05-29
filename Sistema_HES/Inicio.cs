@@ -12,9 +12,56 @@ namespace Sistema_HES
 {
     public partial class Inicio : Form
     {
+        Form FormActivo = null;
         public Inicio()
         {
             InitializeComponent();
+            PnlSubConsulta.Visible = false;
+            PnlSubMedico.Visible = false;
+            PnlSubAdministrar.Visible = false;
+        }
+        void AbrirFormHijo(Form FormHijo)   //funcion para abrir un form dentro de panel contenedor, cerrando si hay alguno activo
+        {
+            if(FormActivo!= null)
+            {
+                FormActivo.Close();
+            }
+            FormActivo = FormHijo;
+            FormHijo.TopLevel = false;
+            FormHijo.Dock = DockStyle.Fill;
+            PnlContenedor.Controls.Add(FormHijo);
+            FormHijo.Show();
+        }
+        void  MostrarSubMenu(Panel SubMenu)     //funcion que muestra un sub menu y lo oculta si esta visible
+        {
+            if (SubMenu.Visible == false)
+            {
+                OcultarSubMenu();
+                SubMenu.Visible = true;
+            }
+            else
+                SubMenu.Visible = false;
+        }
+        void OcultarSubMenu()   //funcion para ocultar un submenu
+        {
+            if (PnlSubAdministrar.Visible == true)
+                PnlSubAdministrar.Visible = false;
+            if (PnlSubConsulta.Visible == true)
+                PnlSubConsulta.Visible = false;
+            if (PnlSubMedico.Visible == true)
+                PnlSubMedico.Visible = false;
+        }
+        private void BtnConsulta_Click(object sender, EventArgs e)  //evento que muestra u oculta el submenu de consulta
+        {
+            MostrarSubMenu(PnlSubConsulta);
+        }
+        private void BtnAgenda_Click(object sender, EventArgs e)    //evento que muestra u oculta el submenu de medico
+        {
+            MostrarSubMenu(PnlSubMedico);
+        }
+        private void BtnAdministrar_Click(object sender, EventArgs e)   //evento que muestra u oculta el submenu de administracion
+        {
+            MostrarSubMenu(PnlSubAdministrar);
         }
     }
 }

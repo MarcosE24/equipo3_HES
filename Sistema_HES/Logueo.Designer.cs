@@ -67,6 +67,7 @@ namespace Sistema_HES
             this.LblRegistrar.Size = new System.Drawing.Size(87, 18);
             this.LblRegistrar.TabIndex = 2;
             this.LblRegistrar.Text = "Registrarse";
+            this.LblRegistrar.Click += new System.EventHandler(this.LblRegistrar_Click);
             // 
             // BtnEntrar
             // 

@@ -46,6 +46,8 @@ namespace Sistema_HES
             this.TbxDireccion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.TbxEdad = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -89,7 +91,7 @@ namespace Sistema_HES
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(142, 99);
+            this.label4.Location = new System.Drawing.Point(142, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 18);
             this.label4.TabIndex = 4;
@@ -97,7 +99,7 @@ namespace Sistema_HES
             // 
             // TbxApellido
             // 
-            this.TbxApellido.Location = new System.Drawing.Point(219, 97);
+            this.TbxApellido.Location = new System.Drawing.Point(219, 94);
             this.TbxApellido.Name = "TbxApellido";
             this.TbxApellido.Size = new System.Drawing.Size(236, 20);
             this.TbxApellido.TabIndex = 5;
@@ -106,7 +108,7 @@ namespace Sistema_HES
             // 
             this.TbxCi.Location = new System.Drawing.Point(219, 128);
             this.TbxCi.Name = "TbxCi";
-            this.TbxCi.Size = new System.Drawing.Size(236, 20);
+            this.TbxCi.Size = new System.Drawing.Size(123, 20);
             this.TbxCi.TabIndex = 6;
             // 
             // label5
@@ -135,6 +137,7 @@ namespace Sistema_HES
             this.BtnAceptar.TabIndex = 9;
             this.BtnAceptar.Text = "Aceptar";
             this.BtnAceptar.UseVisualStyleBackColor = true;
+            this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // BtnCancelar
             // 
@@ -145,6 +148,7 @@ namespace Sistema_HES
             this.BtnCancelar.TabIndex = 10;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // label6
             // 
@@ -197,11 +201,30 @@ namespace Sistema_HES
             this.label8.TabIndex = 16;
             this.label8.Text = "Direccion:";
             // 
+            // TbxEdad
+            // 
+            this.TbxEdad.Location = new System.Drawing.Point(398, 128);
+            this.TbxEdad.Name = "TbxEdad";
+            this.TbxEdad.Size = new System.Drawing.Size(57, 20);
+            this.TbxEdad.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(348, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 18);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Edad:";
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 397);
+            this.ClientSize = new System.Drawing.Size(585, 397);
+            this.Controls.Add(this.TbxEdad);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TbxDireccion);
@@ -245,5 +268,7 @@ namespace Sistema_HES
         private System.Windows.Forms.TextBox TbxDireccion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox TbxEdad;
+        private System.Windows.Forms.Label label9;
     }
 }

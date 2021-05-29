@@ -29,7 +29,7 @@ namespace Sistema_HES
         /// </summary>
         private void InitializeComponent()
         {
-            this.TbxNombre = new System.Windows.Forms.TextBox();
+            this.TbxCi = new System.Windows.Forms.TextBox();
             this.TbxApellido = new System.Windows.Forms.TextBox();
             this.TbxDoctor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,14 +43,15 @@ namespace Sistema_HES
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.TbxConsultar = new System.Windows.Forms.TextBox();
+            this.TbxDescripcion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // TbxNombre
+            // TbxCi
             // 
-            this.TbxNombre.Location = new System.Drawing.Point(217, 120);
-            this.TbxNombre.Name = "TbxNombre";
-            this.TbxNombre.Size = new System.Drawing.Size(189, 20);
-            this.TbxNombre.TabIndex = 0;
+            this.TbxCi.Location = new System.Drawing.Point(257, 120);
+            this.TbxCi.Name = "TbxCi";
+            this.TbxCi.Size = new System.Drawing.Size(149, 20);
+            this.TbxCi.TabIndex = 0;
             // 
             // TbxApellido
             // 
@@ -72,9 +73,9 @@ namespace Sistema_HES
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(145, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 18);
+            this.label1.Size = new System.Drawing.Size(106, 18);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Nombre:";
+            this.label1.Text = "Documento N°:";
             // 
             // label2
             // 
@@ -140,6 +141,7 @@ namespace Sistema_HES
             this.BtnReservar.TabIndex = 10;
             this.BtnReservar.Text = "Reservar";
             this.BtnReservar.UseVisualStyleBackColor = true;
+            this.BtnReservar.Click += new System.EventHandler(this.BtnReservar_Click);
             // 
             // BtnCancelar
             // 
@@ -168,11 +170,20 @@ namespace Sistema_HES
             this.TbxConsultar.Size = new System.Drawing.Size(189, 20);
             this.TbxConsultar.TabIndex = 13;
             // 
+            // TbxDescripcion
+            // 
+            this.TbxDescripcion.Location = new System.Drawing.Point(456, 120);
+            this.TbxDescripcion.Multiline = true;
+            this.TbxDescripcion.Name = "TbxDescripcion";
+            this.TbxDescripcion.Size = new System.Drawing.Size(212, 113);
+            this.TbxDescripcion.TabIndex = 14;
+            // 
             // Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(680, 450);
+            this.Controls.Add(this.TbxDescripcion);
             this.Controls.Add(this.TbxConsultar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.BtnCancelar);
@@ -186,7 +197,7 @@ namespace Sistema_HES
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TbxDoctor);
             this.Controls.Add(this.TbxApellido);
-            this.Controls.Add(this.TbxNombre);
+            this.Controls.Add(this.TbxCi);
             this.Name = "Consultas";
             this.Text = "Consultas";
             this.ResumeLayout(false);
@@ -196,7 +207,7 @@ namespace Sistema_HES
 
         #endregion
 
-        private System.Windows.Forms.TextBox TbxNombre;
+        private System.Windows.Forms.TextBox TbxCi;
         private System.Windows.Forms.TextBox TbxApellido;
         private System.Windows.Forms.TextBox TbxDoctor;
         private System.Windows.Forms.Label label1;
@@ -210,5 +221,6 @@ namespace Sistema_HES
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TbxConsultar;
+        private System.Windows.Forms.TextBox TbxDescripcion;
     }
 }
