@@ -55,6 +55,12 @@
     <Compile Include="Consultas.Designer.cs">
       <DependentUpon>Consultas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Disponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Disponibilidad.Designer.cs">
+      <DependentUpon>Disponibilidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionarMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="Consultas.resx">
       <DependentUpon>Consultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disponibilidad.resx">
+      <DependentUpon>Disponibilidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarMedico.resx">
       <DependentUpon>GestionarMedico.cs</DependentUpon>

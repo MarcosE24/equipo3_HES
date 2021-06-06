@@ -138,7 +138,7 @@ namespace Sistema_HES
             return false;
         }
         public DataTable ObtenerDatos(string query)       //metodo que devuelve un dato de tipo DataReader, devolviendo una fila completa de datos
-        { 
+        {
             MySqlCommand comando = new MySqlCommand(query, conexion);
             DataTable tabla = new DataTable();
             try

@@ -29,6 +29,7 @@ namespace Sistema_HES
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.PnlMenuLateral = new System.Windows.Forms.Panel();
             this.PnlSubAdministrar = new System.Windows.Forms.Panel();
             this.BtnSistema = new System.Windows.Forms.Button();
@@ -37,7 +38,7 @@ namespace Sistema_HES
             this.BtnAdministrar = new System.Windows.Forms.Button();
             this.PnlSubMedico = new System.Windows.Forms.Panel();
             this.BtnPaciente = new System.Windows.Forms.Button();
-            this.BtnEditarMedico = new System.Windows.Forms.Button();
+            this.BtnDisponibilidad = new System.Windows.Forms.Button();
             this.BtnNuevoMedico = new System.Windows.Forms.Button();
             this.BtnAgenda = new System.Windows.Forms.Button();
             this.BtnPerfil = new System.Windows.Forms.Button();
@@ -49,11 +50,13 @@ namespace Sistema_HES
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.LblSaludo = new System.Windows.Forms.Label();
             this.PnlContenedor = new System.Windows.Forms.Panel();
+            this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.PnlMenuLateral.SuspendLayout();
             this.PnlSubAdministrar.SuspendLayout();
             this.PnlSubMedico.SuspendLayout();
             this.PnlSubConsulta.SuspendLayout();
             this.PnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlMenuLateral
@@ -71,7 +74,7 @@ namespace Sistema_HES
             this.PnlMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnlMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.PnlMenuLateral.Name = "PnlMenuLateral";
-            this.PnlMenuLateral.Size = new System.Drawing.Size(150, 461);
+            this.PnlMenuLateral.Size = new System.Drawing.Size(200, 611);
             this.PnlMenuLateral.TabIndex = 0;
             // 
             // PnlSubAdministrar
@@ -81,9 +84,9 @@ namespace Sistema_HES
             this.PnlSubAdministrar.Controls.Add(this.BtnSala);
             this.PnlSubAdministrar.Controls.Add(this.BtnAdminMedico);
             this.PnlSubAdministrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubAdministrar.Location = new System.Drawing.Point(0, 460);
+            this.PnlSubAdministrar.Location = new System.Drawing.Point(0, 640);
             this.PnlSubAdministrar.Name = "PnlSubAdministrar";
-            this.PnlSubAdministrar.Size = new System.Drawing.Size(133, 120);
+            this.PnlSubAdministrar.Size = new System.Drawing.Size(183, 200);
             this.PnlSubAdministrar.TabIndex = 14;
             // 
             // BtnSistema
@@ -92,12 +95,13 @@ namespace Sistema_HES
             this.BtnSistema.FlatAppearance.BorderSize = 0;
             this.BtnSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSistema.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSistema.Location = new System.Drawing.Point(0, 80);
+            this.BtnSistema.Location = new System.Drawing.Point(0, 100);
             this.BtnSistema.Name = "BtnSistema";
-            this.BtnSistema.Size = new System.Drawing.Size(133, 40);
+            this.BtnSistema.Size = new System.Drawing.Size(183, 50);
             this.BtnSistema.TabIndex = 8;
             this.BtnSistema.Text = "Sistema";
             this.BtnSistema.UseVisualStyleBackColor = true;
+            this.BtnSistema.Click += new System.EventHandler(this.BtnSistema_Click);
             // 
             // BtnSala
             // 
@@ -105,12 +109,13 @@ namespace Sistema_HES
             this.BtnSala.FlatAppearance.BorderSize = 0;
             this.BtnSala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSala.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSala.Location = new System.Drawing.Point(0, 40);
+            this.BtnSala.Location = new System.Drawing.Point(0, 50);
             this.BtnSala.Name = "BtnSala";
-            this.BtnSala.Size = new System.Drawing.Size(133, 40);
+            this.BtnSala.Size = new System.Drawing.Size(183, 50);
             this.BtnSala.TabIndex = 7;
             this.BtnSala.Text = "Sala";
             this.BtnSala.UseVisualStyleBackColor = true;
+            this.BtnSala.Click += new System.EventHandler(this.BtnSala_Click);
             // 
             // BtnAdminMedico
             // 
@@ -120,10 +125,11 @@ namespace Sistema_HES
             this.BtnAdminMedico.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdminMedico.Location = new System.Drawing.Point(0, 0);
             this.BtnAdminMedico.Name = "BtnAdminMedico";
-            this.BtnAdminMedico.Size = new System.Drawing.Size(133, 40);
+            this.BtnAdminMedico.Size = new System.Drawing.Size(183, 50);
             this.BtnAdminMedico.TabIndex = 6;
             this.BtnAdminMedico.Text = "Médico";
             this.BtnAdminMedico.UseVisualStyleBackColor = true;
+            this.BtnAdminMedico.Click += new System.EventHandler(this.BtnAdminMedico_Click);
             // 
             // BtnAdministrar
             // 
@@ -132,9 +138,9 @@ namespace Sistema_HES
             this.BtnAdministrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAdministrar.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdministrar.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnAdministrar.Location = new System.Drawing.Point(0, 420);
+            this.BtnAdministrar.Location = new System.Drawing.Point(0, 590);
             this.BtnAdministrar.Name = "BtnAdministrar";
-            this.BtnAdministrar.Size = new System.Drawing.Size(133, 40);
+            this.BtnAdministrar.Size = new System.Drawing.Size(183, 50);
             this.BtnAdministrar.TabIndex = 13;
             this.BtnAdministrar.Text = "Administrar";
             this.BtnAdministrar.UseVisualStyleBackColor = true;
@@ -144,12 +150,12 @@ namespace Sistema_HES
             // 
             this.PnlSubMedico.BackColor = System.Drawing.Color.DodgerBlue;
             this.PnlSubMedico.Controls.Add(this.BtnPaciente);
-            this.PnlSubMedico.Controls.Add(this.BtnEditarMedico);
+            this.PnlSubMedico.Controls.Add(this.BtnDisponibilidad);
             this.PnlSubMedico.Controls.Add(this.BtnNuevoMedico);
             this.PnlSubMedico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubMedico.Location = new System.Drawing.Point(0, 300);
+            this.PnlSubMedico.Location = new System.Drawing.Point(0, 390);
             this.PnlSubMedico.Name = "PnlSubMedico";
-            this.PnlSubMedico.Size = new System.Drawing.Size(133, 120);
+            this.PnlSubMedico.Size = new System.Drawing.Size(183, 200);
             this.PnlSubMedico.TabIndex = 12;
             // 
             // BtnPaciente
@@ -159,26 +165,28 @@ namespace Sistema_HES
             this.BtnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPaciente.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPaciente.ForeColor = System.Drawing.Color.Black;
-            this.BtnPaciente.Location = new System.Drawing.Point(0, 80);
+            this.BtnPaciente.Location = new System.Drawing.Point(0, 100);
             this.BtnPaciente.Name = "BtnPaciente";
-            this.BtnPaciente.Size = new System.Drawing.Size(133, 40);
+            this.BtnPaciente.Size = new System.Drawing.Size(183, 50);
             this.BtnPaciente.TabIndex = 5;
             this.BtnPaciente.Text = "Paciente";
             this.BtnPaciente.UseVisualStyleBackColor = true;
+            this.BtnPaciente.Click += new System.EventHandler(this.BtnPaciente_Click);
             // 
-            // BtnEditarMedico
+            // BtnDisponibilidad
             // 
-            this.BtnEditarMedico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEditarMedico.FlatAppearance.BorderSize = 0;
-            this.BtnEditarMedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEditarMedico.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEditarMedico.ForeColor = System.Drawing.Color.Black;
-            this.BtnEditarMedico.Location = new System.Drawing.Point(0, 40);
-            this.BtnEditarMedico.Name = "BtnEditarMedico";
-            this.BtnEditarMedico.Size = new System.Drawing.Size(133, 40);
-            this.BtnEditarMedico.TabIndex = 4;
-            this.BtnEditarMedico.Text = "Disponibilidad";
-            this.BtnEditarMedico.UseVisualStyleBackColor = true;
+            this.BtnDisponibilidad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnDisponibilidad.FlatAppearance.BorderSize = 0;
+            this.BtnDisponibilidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDisponibilidad.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDisponibilidad.ForeColor = System.Drawing.Color.Black;
+            this.BtnDisponibilidad.Location = new System.Drawing.Point(0, 50);
+            this.BtnDisponibilidad.Name = "BtnDisponibilidad";
+            this.BtnDisponibilidad.Size = new System.Drawing.Size(183, 50);
+            this.BtnDisponibilidad.TabIndex = 4;
+            this.BtnDisponibilidad.Text = "Disponibilidad";
+            this.BtnDisponibilidad.UseVisualStyleBackColor = true;
+            this.BtnDisponibilidad.Click += new System.EventHandler(this.BtnEditarMedico_Click);
             // 
             // BtnNuevoMedico
             // 
@@ -189,10 +197,11 @@ namespace Sistema_HES
             this.BtnNuevoMedico.ForeColor = System.Drawing.Color.Black;
             this.BtnNuevoMedico.Location = new System.Drawing.Point(0, 0);
             this.BtnNuevoMedico.Name = "BtnNuevoMedico";
-            this.BtnNuevoMedico.Size = new System.Drawing.Size(133, 40);
+            this.BtnNuevoMedico.Size = new System.Drawing.Size(183, 50);
             this.BtnNuevoMedico.TabIndex = 3;
             this.BtnNuevoMedico.Text = "Ver Pendientes";
             this.BtnNuevoMedico.UseVisualStyleBackColor = true;
+            this.BtnNuevoMedico.Click += new System.EventHandler(this.BtnNuevoMedico_Click);
             // 
             // BtnAgenda
             // 
@@ -201,9 +210,9 @@ namespace Sistema_HES
             this.BtnAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgenda.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgenda.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnAgenda.Location = new System.Drawing.Point(0, 260);
+            this.BtnAgenda.Location = new System.Drawing.Point(0, 340);
             this.BtnAgenda.Name = "BtnAgenda";
-            this.BtnAgenda.Size = new System.Drawing.Size(133, 40);
+            this.BtnAgenda.Size = new System.Drawing.Size(183, 50);
             this.BtnAgenda.TabIndex = 11;
             this.BtnAgenda.Text = "Agenda";
             this.BtnAgenda.UseVisualStyleBackColor = true;
@@ -216,12 +225,13 @@ namespace Sistema_HES
             this.BtnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPerfil.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPerfil.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnPerfil.Location = new System.Drawing.Point(0, 580);
+            this.BtnPerfil.Location = new System.Drawing.Point(0, 840);
             this.BtnPerfil.Name = "BtnPerfil";
-            this.BtnPerfil.Size = new System.Drawing.Size(133, 40);
+            this.BtnPerfil.Size = new System.Drawing.Size(183, 50);
             this.BtnPerfil.TabIndex = 10;
             this.BtnPerfil.Text = "Mi Perfil";
             this.BtnPerfil.UseVisualStyleBackColor = true;
+            this.BtnPerfil.Click += new System.EventHandler(this.BtnPerfil_Click);
             // 
             // PnlSubConsulta
             // 
@@ -230,9 +240,9 @@ namespace Sistema_HES
             this.PnlSubConsulta.Controls.Add(this.BtnModificarConsulta);
             this.PnlSubConsulta.Controls.Add(this.BtnNuevoConsulta);
             this.PnlSubConsulta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubConsulta.Location = new System.Drawing.Point(0, 140);
+            this.PnlSubConsulta.Location = new System.Drawing.Point(0, 190);
             this.PnlSubConsulta.Name = "PnlSubConsulta";
-            this.PnlSubConsulta.Size = new System.Drawing.Size(133, 120);
+            this.PnlSubConsulta.Size = new System.Drawing.Size(183, 150);
             this.PnlSubConsulta.TabIndex = 9;
             // 
             // BtnHistorial
@@ -242,12 +252,13 @@ namespace Sistema_HES
             this.BtnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnHistorial.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnHistorial.ForeColor = System.Drawing.Color.Black;
-            this.BtnHistorial.Location = new System.Drawing.Point(0, 80);
+            this.BtnHistorial.Location = new System.Drawing.Point(0, 100);
             this.BtnHistorial.Name = "BtnHistorial";
-            this.BtnHistorial.Size = new System.Drawing.Size(133, 40);
+            this.BtnHistorial.Size = new System.Drawing.Size(183, 50);
             this.BtnHistorial.TabIndex = 2;
             this.BtnHistorial.Text = "Historial";
             this.BtnHistorial.UseVisualStyleBackColor = true;
+            this.BtnHistorial.Click += new System.EventHandler(this.BtnHistorial_Click);
             // 
             // BtnModificarConsulta
             // 
@@ -256,12 +267,13 @@ namespace Sistema_HES
             this.BtnModificarConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnModificarConsulta.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificarConsulta.ForeColor = System.Drawing.Color.Black;
-            this.BtnModificarConsulta.Location = new System.Drawing.Point(0, 40);
+            this.BtnModificarConsulta.Location = new System.Drawing.Point(0, 50);
             this.BtnModificarConsulta.Name = "BtnModificarConsulta";
-            this.BtnModificarConsulta.Size = new System.Drawing.Size(133, 40);
+            this.BtnModificarConsulta.Size = new System.Drawing.Size(183, 50);
             this.BtnModificarConsulta.TabIndex = 1;
             this.BtnModificarConsulta.Text = "Editar o Cancelar";
             this.BtnModificarConsulta.UseVisualStyleBackColor = true;
+            this.BtnModificarConsulta.Click += new System.EventHandler(this.BtnModificarConsulta_Click);
             // 
             // BtnNuevoConsulta
             // 
@@ -272,10 +284,11 @@ namespace Sistema_HES
             this.BtnNuevoConsulta.ForeColor = System.Drawing.Color.Black;
             this.BtnNuevoConsulta.Location = new System.Drawing.Point(0, 0);
             this.BtnNuevoConsulta.Name = "BtnNuevoConsulta";
-            this.BtnNuevoConsulta.Size = new System.Drawing.Size(133, 40);
+            this.BtnNuevoConsulta.Size = new System.Drawing.Size(183, 50);
             this.BtnNuevoConsulta.TabIndex = 0;
             this.BtnNuevoConsulta.Text = "Nuevo";
             this.BtnNuevoConsulta.UseVisualStyleBackColor = true;
+            this.BtnNuevoConsulta.Click += new System.EventHandler(this.BtnNuevoConsulta_Click);
             // 
             // BtnConsulta
             // 
@@ -284,9 +297,9 @@ namespace Sistema_HES
             this.BtnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConsulta.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConsulta.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnConsulta.Location = new System.Drawing.Point(0, 100);
+            this.BtnConsulta.Location = new System.Drawing.Point(0, 140);
             this.BtnConsulta.Name = "BtnConsulta";
-            this.BtnConsulta.Size = new System.Drawing.Size(133, 40);
+            this.BtnConsulta.Size = new System.Drawing.Size(183, 50);
             this.BtnConsulta.TabIndex = 8;
             this.BtnConsulta.Text = "Consulta";
             this.BtnConsulta.UseVisualStyleBackColor = true;
@@ -295,10 +308,11 @@ namespace Sistema_HES
             // PnlLogo
             // 
             this.PnlLogo.Controls.Add(this.LblSaludo);
+            this.PnlLogo.Controls.Add(this.PbxLogo);
             this.PnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnlLogo.Location = new System.Drawing.Point(0, 0);
             this.PnlLogo.Name = "PnlLogo";
-            this.PnlLogo.Size = new System.Drawing.Size(133, 100);
+            this.PnlLogo.Size = new System.Drawing.Size(183, 140);
             this.PnlLogo.TabIndex = 4;
             // 
             // LblSaludo
@@ -306,7 +320,7 @@ namespace Sistema_HES
             this.LblSaludo.AutoSize = true;
             this.LblSaludo.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSaludo.ForeColor = System.Drawing.Color.Transparent;
-            this.LblSaludo.Location = new System.Drawing.Point(51, 87);
+            this.LblSaludo.Location = new System.Drawing.Point(71, 114);
             this.LblSaludo.Name = "LblSaludo";
             this.LblSaludo.Size = new System.Drawing.Size(43, 13);
             this.LblSaludo.TabIndex = 0;
@@ -316,19 +330,32 @@ namespace Sistema_HES
             // 
             this.PnlContenedor.AutoScroll = true;
             this.PnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlContenedor.Location = new System.Drawing.Point(150, 0);
+            this.PnlContenedor.Location = new System.Drawing.Point(200, 0);
             this.PnlContenedor.Name = "PnlContenedor";
-            this.PnlContenedor.Size = new System.Drawing.Size(734, 461);
+            this.PnlContenedor.Size = new System.Drawing.Size(984, 611);
             this.PnlContenedor.TabIndex = 1;
+            // 
+            // PbxLogo
+            // 
+            this.PbxLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
+            this.PbxLogo.Location = new System.Drawing.Point(0, 0);
+            this.PbxLogo.Name = "PbxLogo";
+            this.PbxLogo.Size = new System.Drawing.Size(183, 140);
+            this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxLogo.TabIndex = 1;
+            this.PbxLogo.TabStop = false;
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 461);
+            this.ClientSize = new System.Drawing.Size(1184, 611);
             this.Controls.Add(this.PnlContenedor);
             this.Controls.Add(this.PnlMenuLateral);
             this.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1200, 650);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
@@ -338,6 +365,7 @@ namespace Sistema_HES
             this.PnlSubConsulta.ResumeLayout(false);
             this.PnlLogo.ResumeLayout(false);
             this.PnlLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,11 +386,12 @@ namespace Sistema_HES
         private System.Windows.Forms.Button BtnAdministrar;
         private System.Windows.Forms.Panel PnlSubMedico;
         private System.Windows.Forms.Button BtnPaciente;
-        private System.Windows.Forms.Button BtnEditarMedico;
+        private System.Windows.Forms.Button BtnDisponibilidad;
         private System.Windows.Forms.Button BtnNuevoMedico;
         private System.Windows.Forms.Panel PnlSubAdministrar;
         private System.Windows.Forms.Button BtnSistema;
         private System.Windows.Forms.Button BtnSala;
         private System.Windows.Forms.Button BtnAdminMedico;
+        private System.Windows.Forms.PictureBox PbxLogo;
     }
 }

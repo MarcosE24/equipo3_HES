@@ -57,3 +57,7 @@ C:\Users\Nelson\Desktop\Sistema_HES\Sistema_HES\obj\Debug\Sistema_HES.pdb
 C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.Consultas.resources
 C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.ModificarUsuario.resources
 C:\Users\Nelson\Desktop\Sistema_HES\Sistema_HES\obj\Debug\Sistema_HES.ModificarUsuario.resources
+C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.Disponibilidad.resources
+C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.GestionarMedico.resources
+C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.GestionSala.resources
+C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.ModificarConsulta.resources

@@ -66,7 +66,7 @@ namespace Sistema_HES
         void CargaDatos()   //funcion que carga los datos de la persona que tiene abierta la sesion actual
         {
             //armar la asignacion en el sgte orden: ci, nombre, apellido, contraseña, edad, direccion, correo, telefono, rol.
-            DataTable tabla = conexion.ObtenerDatos("select * from " + vector[1] + " where ci=" + vector[0]);
+            DataTable tabla = conexion.ObtenerDatos("select * from " + vector[0] + " where ci=" + vector[1]);
             TbxCi.Text = tabla.Rows[0][0].ToString();
             TbxNombre.Text = tabla.Rows[0][1].ToString();
             TbxApellido.Text = tabla.Rows[0][2].ToString();

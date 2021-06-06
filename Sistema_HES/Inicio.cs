@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +30,7 @@ namespace Sistema_HES
             FormHijo.TopLevel = false;
             FormHijo.Dock = DockStyle.Fill;
             PnlContenedor.Controls.Add(FormHijo);
+            FormHijo.BringToFront();
             FormHijo.Show();
         }
         void  MostrarSubMenu(Panel SubMenu)     //funcion que muestra un sub menu y lo oculta si esta visible
@@ -62,6 +63,54 @@ namespace Sistema_HES
         private void BtnAdministrar_Click(object sender, EventArgs e)   //evento que muestra u oculta el submenu de administracion
         {
             MostrarSubMenu(PnlSubAdministrar);
+        }
+        private void BtnNuevoConsulta_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new Consultas());
+        }
+        private void BtnModificarConsulta_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new ModificarConsulta());
+        }
+
+        private void BtnHistorial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnNuevoMedico_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEditarMedico_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new Disponibilidad());
+        }
+
+        private void BtnPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAdminMedico_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new GestionarMedico());
+        }
+
+        private void BtnSala_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSistema_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnPerfil_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new ModificarUsuario());
         }
     }
 }
