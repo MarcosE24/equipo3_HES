@@ -91,6 +91,12 @@
     <Compile Include="ModificarConsulta.Designer.cs">
       <DependentUpon>ModificarConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsignacionSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignacionSala.Designer.cs">
+      <DependentUpon>AsignacionSala.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarConsulta.resx">
       <DependentUpon>ModificarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignacionSala.resx">
+      <DependentUpon>AsignacionSala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
