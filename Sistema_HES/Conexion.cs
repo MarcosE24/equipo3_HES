@@ -72,7 +72,10 @@ namespace Sistema_HES
                                 return true;
                             }
                             else    //sino coinciden los datos
+                            {
                                 LblError.Visible = true;
+                                archivo.Close();
+                            }
                         }
                         else    //si no recupero ningun dato
                         {
@@ -128,6 +131,7 @@ namespace Sistema_HES
                 adaptador.Fill(tabla);
                 if (tabla.Rows.Count == 1)
                 {
+                    MessageBox.Show("hay algo");
                     return true;
                 }
                 else

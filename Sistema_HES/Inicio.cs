@@ -22,6 +22,8 @@ namespace Sistema_HES
             tabla = conexion.ObtenerDatos("select nombre from " + operador[0] + " where ci=" + operador[1]);
             LblSaludo.Text = "Hola " + tabla.Rows[0][0].ToString();
             NivelOperador();
+            BtnSistema.Enabled = false;
+            BtnSistema.Visible = false;
         }
         void AbrirFormHijo(Form FormHijo)   //funcion para abrir un form dentro de panel contenedor, cerrando si hay alguno activo
         {
@@ -124,6 +126,13 @@ namespace Sistema_HES
             {
                 BtnAdministrar.Enabled = false;
                 BtnAdministrar.Visible = false;
+                BtnPerfil.Enabled = false;
+                BtnPerfil.Visible = false;
+            }
+            else if(operador[0] == "admin")
+            {
+                BtnPerfil.Enabled = false;
+                BtnPerfil.Visible = false;
             }
         }
     }

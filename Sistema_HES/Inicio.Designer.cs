@@ -49,8 +49,8 @@ namespace Sistema_HES
             this.BtnConsulta = new System.Windows.Forms.Button();
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.LblSaludo = new System.Windows.Forms.Label();
-            this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.PnlContenedor = new System.Windows.Forms.Panel();
+            this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.PnlMenuLateral.SuspendLayout();
             this.PnlSubAdministrar.SuspendLayout();
             this.PnlSubMedico.SuspendLayout();
@@ -326,25 +326,27 @@ namespace Sistema_HES
             this.LblSaludo.TabIndex = 0;
             this.LblSaludo.Text = "Saludo";
             // 
+            // PnlContenedor
+            // 
+            this.PnlContenedor.AutoScroll = true;
+            this.PnlContenedor.BackgroundImage = global::Sistema_HES.Properties.Resources.cual_es_la_mejor_tela_para_uniformes_medicos_por_palermo_textil;
+            this.PnlContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlContenedor.Location = new System.Drawing.Point(200, 0);
+            this.PnlContenedor.Name = "PnlContenedor";
+            this.PnlContenedor.Size = new System.Drawing.Size(984, 611);
+            this.PnlContenedor.TabIndex = 1;
+            // 
             // PbxLogo
             // 
             this.PbxLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
+            this.PbxLogo.Image = global::Sistema_HES.Properties.Resources.hes3;
             this.PbxLogo.Location = new System.Drawing.Point(0, 0);
             this.PbxLogo.Name = "PbxLogo";
             this.PbxLogo.Size = new System.Drawing.Size(183, 140);
             this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbxLogo.TabIndex = 1;
             this.PbxLogo.TabStop = false;
-            // 
-            // PnlContenedor
-            // 
-            this.PnlContenedor.AutoScroll = true;
-            this.PnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlContenedor.Location = new System.Drawing.Point(200, 0);
-            this.PnlContenedor.Name = "PnlContenedor";
-            this.PnlContenedor.Size = new System.Drawing.Size(984, 611);
-            this.PnlContenedor.TabIndex = 1;
             // 
             // Inicio
             // 
