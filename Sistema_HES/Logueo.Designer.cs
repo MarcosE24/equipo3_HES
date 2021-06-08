@@ -93,6 +93,7 @@ namespace Sistema_HES
             this.TbxContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbxContraseña.Location = new System.Drawing.Point(133, 86);
             this.TbxContraseña.Name = "TbxContraseña";
+            this.TbxContraseña.PasswordChar = '*';
             this.TbxContraseña.Size = new System.Drawing.Size(186, 24);
             this.TbxContraseña.TabIndex = 5;
             // 

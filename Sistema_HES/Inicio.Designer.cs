@@ -49,8 +49,8 @@ namespace Sistema_HES
             this.BtnConsulta = new System.Windows.Forms.Button();
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.LblSaludo = new System.Windows.Forms.Label();
-            this.PnlContenedor = new System.Windows.Forms.Panel();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
+            this.PnlContenedor = new System.Windows.Forms.Panel();
             this.PnlMenuLateral.SuspendLayout();
             this.PnlSubAdministrar.SuspendLayout();
             this.PnlSubMedico.SuspendLayout();
@@ -320,20 +320,11 @@ namespace Sistema_HES
             this.LblSaludo.AutoSize = true;
             this.LblSaludo.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSaludo.ForeColor = System.Drawing.Color.Transparent;
-            this.LblSaludo.Location = new System.Drawing.Point(71, 114);
+            this.LblSaludo.Location = new System.Drawing.Point(59, 114);
             this.LblSaludo.Name = "LblSaludo";
             this.LblSaludo.Size = new System.Drawing.Size(43, 13);
             this.LblSaludo.TabIndex = 0;
             this.LblSaludo.Text = "Saludo";
-            // 
-            // PnlContenedor
-            // 
-            this.PnlContenedor.AutoScroll = true;
-            this.PnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlContenedor.Location = new System.Drawing.Point(200, 0);
-            this.PnlContenedor.Name = "PnlContenedor";
-            this.PnlContenedor.Size = new System.Drawing.Size(984, 611);
-            this.PnlContenedor.TabIndex = 1;
             // 
             // PbxLogo
             // 
@@ -345,6 +336,15 @@ namespace Sistema_HES
             this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbxLogo.TabIndex = 1;
             this.PbxLogo.TabStop = false;
+            // 
+            // PnlContenedor
+            // 
+            this.PnlContenedor.AutoScroll = true;
+            this.PnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlContenedor.Location = new System.Drawing.Point(200, 0);
+            this.PnlContenedor.Name = "PnlContenedor";
+            this.PnlContenedor.Size = new System.Drawing.Size(984, 611);
+            this.PnlContenedor.TabIndex = 1;
             // 
             // Inicio
             // 
@@ -359,6 +359,7 @@ namespace Sistema_HES
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Inicio_FormClosed);
             this.PnlMenuLateral.ResumeLayout(false);
             this.PnlSubAdministrar.ResumeLayout(false);
             this.PnlSubMedico.ResumeLayout(false);

@@ -15,14 +15,14 @@ namespace Sistema_HES
     {
         Conexion conexion = new Conexion();
         StreamReader lector = new StreamReader(@"Rol.txt");
-        string[] vector;
+        string[] operador;
         public ModificarUsuario()
         {
             InitializeComponent();
         }
         private void ModificarUsuario_Load(object sender, EventArgs e)
         {
-            vector = lector.ReadLine().Split(',');
+            operador = lector.ReadLine().Split(',');
             CargaDatos();
         }
         private void BtnEditar_Click(object sender, EventArgs e)    //metodo que dependiendo de la etiqueta edita y guarda la informacion, desabilita los textbox's y cambia de etiqueta a los botones
@@ -45,7 +45,7 @@ namespace Sistema_HES
             {
                 if (TbxCi.Text != "" && TbxNombre.Text != "" && TbxApellido.Text != "" && TbxContraseña.Text != "" && TbxEdad.Text != "" && TbxDireccion.Text != "" && TbxCorreo.Text != "" && TbxTelefono.Text != "")
                 {
-                    conexion.SinRetorno("update usuarios set ci=\"" + TbxCi.Text + "\",nombre=\"" + TbxNombre.Text + "\",apellido=\"" + TbxApellido.Text + "\",contraseña=\"" + TbxContraseña.Text + "\",edad=" + TbxEdad.Text + ",direccion=\"" + TbxDireccion.Text + "\",correo=\"" + TbxCorreo.Text + "\",telefono=\"" + TbxTelefono.Text + "\" where ci=" + vector[0] + ";");
+                    conexion.SinRetorno("update usuarios set ci=\"" + TbxCi.Text + "\",nombre=\"" + TbxNombre.Text + "\",apellido=\"" + TbxApellido.Text + "\",contraseña=\"" + TbxContraseña.Text + "\",edad=" + TbxEdad.Text + ",direccion=\"" + TbxDireccion.Text + "\",correo=\"" + TbxCorreo.Text + "\",telefono=\"" + TbxTelefono.Text + "\" where ci=" + operador[0] + ";");
                     CargaDatos();
                     BtnEditar.Text = "Editar";
                     BtnCerrar.Text = "Cerrar";
@@ -66,17 +66,19 @@ namespace Sistema_HES
         void CargaDatos()   //funcion que carga los datos de la persona que tiene abierta la sesion actual
         {
             //armar la asignacion en el sgte orden: ci, nombre, apellido, contraseña, edad, direccion, correo, telefono, rol.
-            DataTable tabla = conexion.ObtenerDatos("select * from " + vector[0] + " where ci=" + vector[1]);
-            TbxCi.Text = tabla.Rows[0][0].ToString();
-            TbxNombre.Text = tabla.Rows[0][1].ToString();
-            TbxApellido.Text = tabla.Rows[0][2].ToString();
-            TbxContraseña.Text = tabla.Rows[0][3].ToString();
-            TbxEdad.Text = tabla.Rows[0][4].ToString();
-            TbxDireccion.Text = tabla.Rows[0][5].ToString();
-            TbxCorreo.Text = tabla.Rows[0][6].ToString();
-            TbxTelefono.Text = tabla.Rows[0][7].ToString();
+            DataTable tabla = conexion.ObtenerDatos("select * from " + operador[0] + " where ci=" + operador[1]);
+            if(tabla!=null)
+            {
+                TbxCi.Text = tabla.Rows[0][0].ToString();
+                TbxNombre.Text = tabla.Rows[0][1].ToString();
+                TbxApellido.Text = tabla.Rows[0][2].ToString();
+                TbxContraseña.Text = tabla.Rows[0][3].ToString();
+                TbxEdad.Text = tabla.Rows[0][4].ToString();
+                TbxDireccion.Text = tabla.Rows[0][5].ToString();
+                TbxCorreo.Text = tabla.Rows[0][6].ToString();
+                TbxTelefono.Text = tabla.Rows[0][7].ToString();
+            }
         }
-
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             if(BtnCerrar.Text=="Cerrar")

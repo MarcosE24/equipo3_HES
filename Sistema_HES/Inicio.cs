@@ -1,24 +1,27 @@
 ﻿ using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Sistema_HES
 {
     public partial class Inicio : Form
     {
+        Conexion conexion = new Conexion();
         Form FormActivo = null;
+        StreamReader lector = new StreamReader(@"Rol.txt");
+        string[] operador;
+        DataTable tabla;
         public Inicio()
         {
             InitializeComponent();
             PnlSubConsulta.Visible = false;
             PnlSubMedico.Visible = false;
             PnlSubAdministrar.Visible = false;
+            operador = lector.ReadLine().Split(',');
+            tabla = conexion.ObtenerDatos("select nombre from " + operador[0] + " where ci=" + operador[1]);
+            LblSaludo.Text = "Hola " + tabla.Rows[0][0].ToString();
+            NivelOperador();
         }
         void AbrirFormHijo(Form FormHijo)   //funcion para abrir un form dentro de panel contenedor, cerrando si hay alguno activo
         {
@@ -72,45 +75,56 @@ namespace Sistema_HES
         {
             AbrirFormHijo(new ModificarConsulta());
         }
-
         private void BtnHistorial_Click(object sender, EventArgs e)
         {
-
+            AbrirFormHijo(new HistorialConsulta());
         }
-
         private void BtnNuevoMedico_Click(object sender, EventArgs e)
         {
-
+            AbrirFormHijo(new Pendientes());
         }
-
         private void BtnEditarMedico_Click(object sender, EventArgs e)
         {
             AbrirFormHijo(new Disponibilidad());
         }
-
         private void BtnPaciente_Click(object sender, EventArgs e)
         {
-
+            AbrirFormHijo(new Paciente());
         }
-
         private void BtnAdminMedico_Click(object sender, EventArgs e)
         {
             AbrirFormHijo(new GestionarMedico());
         }
-
         private void BtnSala_Click(object sender, EventArgs e)
         {
-
+            AbrirFormHijo(new GestionSala());
         }
-
         private void BtnSistema_Click(object sender, EventArgs e)
         {
 
         }
-
         private void BtnPerfil_Click(object sender, EventArgs e)
         {
             AbrirFormHijo(new ModificarUsuario());
+        }
+        private void Inicio_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+        void NivelOperador()
+        {
+            if (operador[0] == "usuarios")
+            {
+                BtnAgenda.Enabled = false;
+                BtnAgenda.Visible = false;
+                BtnAdministrar.Enabled = false;
+                BtnAdministrar.Visible = false;
+            }
+            else if(operador[0] == "medico")
+            {
+                BtnAdministrar.Enabled = false;
+                BtnAdministrar.Visible = false;
+            }
         }
     }
 }

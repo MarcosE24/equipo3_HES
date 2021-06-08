@@ -61,3 +61,7 @@ C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistem
 C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.GestionarMedico.resources
 C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.GestionSala.resources
 C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.ModificarConsulta.resources
+C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.AsignacionSala.resources
+C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.HistorialConsulta.resources
+C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.Pendientes.resources
+C:\Users\Marcos Escobar\Documents\LP II\Sistema HES\Sistema_HES\obj\Debug\Sistema_HES.Paciente.resources

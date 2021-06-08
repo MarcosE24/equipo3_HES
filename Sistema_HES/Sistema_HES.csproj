@@ -73,6 +73,12 @@
     <Compile Include="GestionSala.Designer.cs">
       <DependentUpon>GestionSala.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistorialConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialConsulta.Designer.cs">
+      <DependentUpon>HistorialConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,18 @@
     <Compile Include="ModificarUsuario.Designer.cs">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paciente.Designer.cs">
+      <DependentUpon>Paciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pendientes.Designer.cs">
+      <DependentUpon>Pendientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro.cs">
@@ -123,6 +141,9 @@
     <EmbeddedResource Include="GestionSala.resx">
       <DependentUpon>GestionSala.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HistorialConsulta.resx">
+      <DependentUpon>HistorialConsulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paciente.resx">
+      <DependentUpon>Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pendientes.resx">
+      <DependentUpon>Pendientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

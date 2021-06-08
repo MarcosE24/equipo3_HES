@@ -29,7 +29,8 @@ namespace Sistema_HES
                 {
                     if (tabla.Rows[0][0].ToString() == contraseña)  //si coinciden los datos...
                     {
-                        archivo.WriteLine(ci + "paciente");
+                        archivo.WriteLine("usuarios," + ci);
+                        archivo.Close();
                         return true;
                     }
                     else    //sino coinciden los datos
@@ -47,7 +48,8 @@ namespace Sistema_HES
                     {
                         if (tabla.Rows[0][0].ToString() == contraseña)  //si coinciden los datos...
                         {
-                            archivo.WriteLine(ci + "medico");
+                            archivo.WriteLine("medico," + ci);
+                            archivo.Close();
                             return true;
                         }
                         else    //sino coinciden los datos
@@ -65,7 +67,8 @@ namespace Sistema_HES
                         {
                             if (tabla.Rows[0][0].ToString() == contraseña)  //si coinciden los datos...
                             {
-                                archivo.WriteLine(ci + "admin");
+                                archivo.WriteLine("admin," + ci);
+                                archivo.Close();
                                 return true;
                             }
                             else    //sino coinciden los datos
