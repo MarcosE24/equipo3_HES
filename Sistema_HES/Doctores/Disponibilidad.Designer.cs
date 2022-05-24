@@ -48,6 +48,8 @@ namespace Sistema_HES
             this.RbtnLunes = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DgwVistaDias = new System.Windows.Forms.DataGridView();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgwVistaDias)).BeginInit();
@@ -59,7 +61,7 @@ namespace Sistema_HES
             this.RbtnMartes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnMartes.Location = new System.Drawing.Point(79, 25);
             this.RbtnMartes.Name = "RbtnMartes";
-            this.RbtnMartes.Size = new System.Drawing.Size(77, 22);
+            this.RbtnMartes.Size = new System.Drawing.Size(78, 24);
             this.RbtnMartes.TabIndex = 1;
             this.RbtnMartes.Text = "Martes";
             this.RbtnMartes.UseVisualStyleBackColor = true;
@@ -70,7 +72,7 @@ namespace Sistema_HES
             this.RbtnMiercoles.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnMiercoles.Location = new System.Drawing.Point(162, 25);
             this.RbtnMiercoles.Name = "RbtnMiercoles";
-            this.RbtnMiercoles.Size = new System.Drawing.Size(98, 22);
+            this.RbtnMiercoles.Size = new System.Drawing.Size(99, 24);
             this.RbtnMiercoles.TabIndex = 2;
             this.RbtnMiercoles.Text = "Miercoles";
             this.RbtnMiercoles.UseVisualStyleBackColor = true;
@@ -81,7 +83,7 @@ namespace Sistema_HES
             this.RbtnJueves.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnJueves.Location = new System.Drawing.Point(266, 25);
             this.RbtnJueves.Name = "RbtnJueves";
-            this.RbtnJueves.Size = new System.Drawing.Size(78, 22);
+            this.RbtnJueves.Size = new System.Drawing.Size(79, 24);
             this.RbtnJueves.TabIndex = 3;
             this.RbtnJueves.Text = "Jueves";
             this.RbtnJueves.UseVisualStyleBackColor = true;
@@ -92,7 +94,7 @@ namespace Sistema_HES
             this.RbtnViernes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnViernes.Location = new System.Drawing.Point(350, 25);
             this.RbtnViernes.Name = "RbtnViernes";
-            this.RbtnViernes.Size = new System.Drawing.Size(80, 22);
+            this.RbtnViernes.Size = new System.Drawing.Size(81, 24);
             this.RbtnViernes.TabIndex = 4;
             this.RbtnViernes.Text = "Viernes";
             this.RbtnViernes.UseVisualStyleBackColor = true;
@@ -103,7 +105,7 @@ namespace Sistema_HES
             this.RbtnSabado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnSabado.Location = new System.Drawing.Point(436, 25);
             this.RbtnSabado.Name = "RbtnSabado";
-            this.RbtnSabado.Size = new System.Drawing.Size(83, 22);
+            this.RbtnSabado.Size = new System.Drawing.Size(84, 24);
             this.RbtnSabado.TabIndex = 5;
             this.RbtnSabado.Text = "Sabado";
             this.RbtnSabado.UseVisualStyleBackColor = true;
@@ -114,7 +116,7 @@ namespace Sistema_HES
             this.RbtnDomingo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnDomingo.Location = new System.Drawing.Point(525, 25);
             this.RbtnDomingo.Name = "RbtnDomingo";
-            this.RbtnDomingo.Size = new System.Drawing.Size(92, 22);
+            this.RbtnDomingo.Size = new System.Drawing.Size(93, 24);
             this.RbtnDomingo.TabIndex = 6;
             this.RbtnDomingo.Text = "Domingo";
             this.RbtnDomingo.UseVisualStyleBackColor = true;
@@ -126,7 +128,7 @@ namespace Sistema_HES
             this.RbtnMatutino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnMatutino.Location = new System.Drawing.Point(29, 26);
             this.RbtnMatutino.Name = "RbtnMatutino";
-            this.RbtnMatutino.Size = new System.Drawing.Size(227, 22);
+            this.RbtnMatutino.Size = new System.Drawing.Size(228, 24);
             this.RbtnMatutino.TabIndex = 0;
             this.RbtnMatutino.Text = "Turno Mañana (8:00 a 12:00)";
             this.RbtnMatutino.UseVisualStyleBackColor = true;
@@ -138,7 +140,7 @@ namespace Sistema_HES
             this.RbtnVespertino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnVespertino.Location = new System.Drawing.Point(29, 54);
             this.RbtnVespertino.Name = "RbtnVespertino";
-            this.RbtnVespertino.Size = new System.Drawing.Size(212, 22);
+            this.RbtnVespertino.Size = new System.Drawing.Size(213, 24);
             this.RbtnVespertino.TabIndex = 1;
             this.RbtnVespertino.Text = "Turno Tarde (13:30 a 17:30)";
             this.RbtnVespertino.UseVisualStyleBackColor = true;
@@ -150,7 +152,7 @@ namespace Sistema_HES
             this.RbtnDiurno.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnDiurno.Location = new System.Drawing.Point(29, 82);
             this.RbtnDiurno.Name = "RbtnDiurno";
-            this.RbtnDiurno.Size = new System.Drawing.Size(222, 22);
+            this.RbtnDiurno.Size = new System.Drawing.Size(223, 24);
             this.RbtnDiurno.TabIndex = 2;
             this.RbtnDiurno.Text = "Un dia entero (8:00 a 17:30)";
             this.RbtnDiurno.UseVisualStyleBackColor = true;
@@ -162,7 +164,7 @@ namespace Sistema_HES
             this.RbtnOtro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnOtro.Location = new System.Drawing.Point(299, 41);
             this.RbtnOtro.Name = "RbtnOtro";
-            this.RbtnOtro.Size = new System.Drawing.Size(193, 22);
+            this.RbtnOtro.Size = new System.Drawing.Size(194, 24);
             this.RbtnOtro.TabIndex = 3;
             this.RbtnOtro.Text = "Otra hora (especificar)";
             this.RbtnOtro.UseVisualStyleBackColor = true;
@@ -190,7 +192,7 @@ namespace Sistema_HES
             "17:00"});
             this.CbxHoraInicio.Location = new System.Drawing.Point(309, 69);
             this.CbxHoraInicio.Name = "CbxHoraInicio";
-            this.CbxHoraInicio.Size = new System.Drawing.Size(72, 26);
+            this.CbxHoraInicio.Size = new System.Drawing.Size(72, 28);
             this.CbxHoraInicio.TabIndex = 4;
             // 
             // label1
@@ -199,7 +201,7 @@ namespace Sistema_HES
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(387, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 18);
+            this.label1.Size = new System.Drawing.Size(19, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "a";
             // 
@@ -224,7 +226,7 @@ namespace Sistema_HES
             "17:00"});
             this.CbxHoraFinal.Location = new System.Drawing.Point(411, 69);
             this.CbxHoraFinal.Name = "CbxHoraFinal";
-            this.CbxHoraFinal.Size = new System.Drawing.Size(72, 26);
+            this.CbxHoraFinal.Size = new System.Drawing.Size(72, 28);
             this.CbxHoraFinal.TabIndex = 6;
             // 
             // groupBox3
@@ -275,7 +277,7 @@ namespace Sistema_HES
             this.RbtnLunes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnLunes.Location = new System.Drawing.Point(6, 25);
             this.RbtnLunes.Name = "RbtnLunes";
-            this.RbtnLunes.Size = new System.Drawing.Size(67, 22);
+            this.RbtnLunes.Size = new System.Drawing.Size(68, 24);
             this.RbtnLunes.TabIndex = 12;
             this.RbtnLunes.Text = "Lunes";
             this.RbtnLunes.UseVisualStyleBackColor = true;
@@ -307,6 +309,30 @@ namespace Sistema_HES
             this.DgwVistaDias.Size = new System.Drawing.Size(576, 150);
             this.DgwVistaDias.TabIndex = 14;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI Black", 10F);
+            this.btnEditar.Location = new System.Drawing.Point(672, 320);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(120, 40);
+            this.btnEditar.TabIndex = 10;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI Black", 10F);
+            this.btnEliminar.Location = new System.Drawing.Point(672, 274);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(120, 40);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
             // Disponibilidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +341,8 @@ namespace Sistema_HES
             this.Controls.Add(this.DgwVistaDias);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnCerrar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -350,5 +378,7 @@ namespace Sistema_HES
         private System.Windows.Forms.RadioButton RbtnLunes;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView DgwVistaDias;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

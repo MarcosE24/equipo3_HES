@@ -44,7 +44,7 @@ namespace Sistema_HES
             for (i = 0; i < 16; i++)
             {
                 if (tabla.Rows[0][i + 2].ToString() == "libre")
-                {
+                { 
                     CbxHora.Items.Add(Horas(i + 2));
                 }
             }
@@ -96,6 +96,16 @@ namespace Sistema_HES
                     return "17:00";
             }
             return null;
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

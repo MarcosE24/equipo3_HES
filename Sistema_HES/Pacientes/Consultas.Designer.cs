@@ -36,7 +36,6 @@ namespace Sistema_HES
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnReservar = new System.Windows.Forms.Button();
-            this.BtnCancelar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.TbxDescripcion = new System.Windows.Forms.TextBox();
             this.CbxHora = new System.Windows.Forms.ComboBox();
@@ -117,25 +116,16 @@ namespace Sistema_HES
             // BtnReservar
             // 
             this.BtnReservar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnReservar.BackColor = System.Drawing.Color.MintCream;
+            this.BtnReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnReservar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReservar.Location = new System.Drawing.Point(470, 426);
             this.BtnReservar.Name = "BtnReservar";
             this.BtnReservar.Size = new System.Drawing.Size(106, 37);
             this.BtnReservar.TabIndex = 10;
             this.BtnReservar.Text = "Reservar";
-            this.BtnReservar.UseVisualStyleBackColor = true;
+            this.BtnReservar.UseVisualStyleBackColor = false;
             this.BtnReservar.Click += new System.EventHandler(this.BtnReservar_Click);
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnCancelar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.Location = new System.Drawing.Point(582, 426);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(94, 37);
-            this.BtnCancelar.TabIndex = 11;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -163,9 +153,26 @@ namespace Sistema_HES
             this.CbxHora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CbxHora.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxHora.FormattingEnabled = true;
+            this.CbxHora.Items.AddRange(new object[] {
+            "08:00",
+            "08:30",
+            "09:00",
+            "09:30",
+            "10:00",
+            "10:30",
+            "11:00",
+            "11:30",
+            "13:30",
+            "14:00",
+            "14:30",
+            "15:00",
+            "15:30",
+            "16:00",
+            "16:30",
+            "17:00"});
             this.CbxHora.Location = new System.Drawing.Point(435, 152);
             this.CbxHora.Name = "CbxHora";
-            this.CbxHora.Size = new System.Drawing.Size(121, 26);
+            this.CbxHora.Size = new System.Drawing.Size(121, 28);
             this.CbxHora.TabIndex = 18;
             // 
             // label9
@@ -207,7 +214,7 @@ namespace Sistema_HES
             this.LblSala.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSala.Location = new System.Drawing.Point(350, 199);
             this.LblSala.Name = "LblSala";
-            this.LblSala.Size = new System.Drawing.Size(16, 18);
+            this.LblSala.Size = new System.Drawing.Size(17, 20);
             this.LblSala.TabIndex = 21;
             this.LblSala.Text = "0";
             // 
@@ -218,7 +225,7 @@ namespace Sistema_HES
             this.CbxEspecialidad.FormattingEnabled = true;
             this.CbxEspecialidad.Location = new System.Drawing.Point(528, 98);
             this.CbxEspecialidad.Name = "CbxEspecialidad";
-            this.CbxEspecialidad.Size = new System.Drawing.Size(190, 26);
+            this.CbxEspecialidad.Size = new System.Drawing.Size(190, 28);
             this.CbxEspecialidad.TabIndex = 22;
             // 
             // LblDoctor
@@ -228,20 +235,23 @@ namespace Sistema_HES
             this.LblDoctor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDoctor.Location = new System.Drawing.Point(180, 199);
             this.LblDoctor.Name = "LblDoctor";
-            this.LblDoctor.Size = new System.Drawing.Size(38, 18);
+            this.LblDoctor.Size = new System.Drawing.Size(39, 20);
             this.LblDoctor.TabIndex = 23;
             this.LblDoctor.Text = "doc";
             // 
             // BtnCerrar
             // 
             this.BtnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnCerrar.BackColor = System.Drawing.Color.MintCream;
+            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCerrar.Location = new System.Drawing.Point(682, 426);
+            this.BtnCerrar.Location = new System.Drawing.Point(582, 426);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(94, 37);
             this.BtnCerrar.TabIndex = 24;
             this.BtnCerrar.Text = "Cerrar";
-            this.BtnCerrar.UseVisualStyleBackColor = true;
+            this.BtnCerrar.UseVisualStyleBackColor = false;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // label2
             // 
@@ -261,7 +271,7 @@ namespace Sistema_HES
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(74, 259);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(270, 18);
+            this.label4.Size = new System.Drawing.Size(271, 20);
             this.label4.TabIndex = 26;
             this.label4.Text = "Elija una fecha desde el calendario:";
             // 
@@ -269,6 +279,7 @@ namespace Sistema_HES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(829, 511);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -282,7 +293,6 @@ namespace Sistema_HES
             this.Controls.Add(this.label9);
             this.Controls.Add(this.TbxDescripcion);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnReservar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -307,7 +317,6 @@ namespace Sistema_HES
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnReservar;
-        private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TbxDescripcion;
         private System.Windows.Forms.ComboBox CbxHora;
