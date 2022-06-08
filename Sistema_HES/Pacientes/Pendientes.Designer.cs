@@ -48,6 +48,7 @@ namespace Sistema_HES
             // 
             this.BtnAtendido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnAtendido.Enabled = false;
+            this.BtnAtendido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAtendido.Font = new System.Drawing.Font("Segoe UI Black", 10F);
             this.BtnAtendido.Location = new System.Drawing.Point(310, 312);
             this.BtnAtendido.Name = "BtnAtendido";
@@ -61,6 +62,7 @@ namespace Sistema_HES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(800, 402);
             this.Controls.Add(this.BtnAtendido);
             this.Controls.Add(this.DgwVista);

@@ -38,7 +38,11 @@ namespace Sistema_HES
             this.TbxContraseña = new System.Windows.Forms.TextBox();
             this.LblError = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,6 +78,9 @@ namespace Sistema_HES
             // 
             // BtnEntrar
             // 
+            this.BtnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.BtnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEntrar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEntrar.Location = new System.Drawing.Point(122, 251);
             this.BtnEntrar.Name = "BtnEntrar";
@@ -116,18 +123,40 @@ namespace Sistema_HES
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sistema_HES.Properties.Resources.hes3;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(385, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(369, 112);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(407, 48);
+            this.panel1.TabIndex = 8;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(368, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Logueo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 416);
+            this.ClientSize = new System.Drawing.Size(407, 484);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LblError);
             this.Controls.Add(this.TbxContraseña);
@@ -136,11 +165,15 @@ namespace Sistema_HES
             this.Controls.Add(this.LblRegistrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Logueo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio Sesion";
+            this.MaximizedBoundsChanged += new System.EventHandler(this.Logueo_MaximizedBoundsChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,6 +189,8 @@ namespace Sistema_HES
         private System.Windows.Forms.TextBox TbxContraseña;
         private System.Windows.Forms.Label LblError;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

@@ -130,6 +130,7 @@ namespace Sistema_HES
             // 
             // BtnAceptar
             // 
+            this.BtnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAceptar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAceptar.Location = new System.Drawing.Point(125, 330);
             this.BtnAceptar.Name = "BtnAceptar";
@@ -141,6 +142,7 @@ namespace Sistema_HES
             // 
             // BtnCancelar
             // 
+            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.Location = new System.Drawing.Point(373, 330);
             this.BtnCancelar.Name = "BtnCancelar";
@@ -222,6 +224,7 @@ namespace Sistema_HES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(585, 397);
             this.Controls.Add(this.TbxEdad);
             this.Controls.Add(this.label9);

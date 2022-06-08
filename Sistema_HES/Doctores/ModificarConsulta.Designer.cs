@@ -96,6 +96,7 @@ namespace Sistema_HES
             // BtnCerrar
             // 
             this.BtnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCerrar.Location = new System.Drawing.Point(754, 473);
             this.BtnCerrar.Name = "BtnCerrar";
@@ -112,6 +113,7 @@ namespace Sistema_HES
             this.DgwListaConsulta.AllowUserToResizeColumns = false;
             this.DgwListaConsulta.AllowUserToResizeRows = false;
             this.DgwListaConsulta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DgwListaConsulta.BackgroundColor = System.Drawing.Color.White;
             this.DgwListaConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgwListaConsulta.Location = new System.Drawing.Point(12, 54);
             this.DgwListaConsulta.MultiSelect = false;
@@ -138,6 +140,7 @@ namespace Sistema_HES
             // 
             this.BtnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEditar.Enabled = false;
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Location = new System.Drawing.Point(480, 473);
             this.BtnEditar.Name = "BtnEditar";
@@ -174,6 +177,7 @@ namespace Sistema_HES
             // 
             this.BtnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEliminar.Enabled = false;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.Location = new System.Drawing.Point(617, 473);
             this.BtnEliminar.Name = "BtnEliminar";
@@ -243,6 +247,7 @@ namespace Sistema_HES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(931, 540);
             this.Controls.Add(this.CbxEspecialidad);
             this.Controls.Add(this.Calendario);
