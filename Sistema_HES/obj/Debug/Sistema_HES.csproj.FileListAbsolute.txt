@@ -102,3 +102,41 @@ C:\Users\hp\Documents\Lenguaje C\LP2 2021\equipo3_HES\Sistema_HES\obj\Debug\Sist
 C:\Users\hp\Documents\Lenguaje C\LP2 2021\equipo3_HES\Sistema_HES\obj\Debug\Sistema_HES.csproj.CopyComplete
 C:\Users\hp\Documents\Lenguaje C\LP2 2021\equipo3_HES\Sistema_HES\obj\Debug\Sistema_HES.exe
 C:\Users\hp\Documents\Lenguaje C\LP2 2021\equipo3_HES\Sistema_HES\obj\Debug\Sistema_HES.pdb
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Sistema_HES.exe.config
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Sistema_HES.exe
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Sistema_HES.pdb
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Google.Protobuf.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Zstandard.Net.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\BouncyCastle.Crypto.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Ubiety.Dns.Core.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Renci.SshNet.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\System.Memory.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\System.Buffers.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\K4os.Compression.LZ4.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\K4os.Hash.xxHash.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\System.Numerics.Vectors.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\MySql.Data.xml
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.csproj.AssemblyReference.cache
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.csproj.SuggestedBindingRedirects.cache
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.exe.config
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Consultas.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Disponibilidad.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.GestionarMedico.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.GestionSala.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.HistorialConsulta.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Inicio.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Logueo.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.ModificarConsulta.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.AsignacionSala.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.ModificarUsuario.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Paciente.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Pendientes.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Properties.Resources.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Registro.resources
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.csproj.GenerateResource.cache
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.csproj.CoreCompileInputs.cache
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.csproj.CopyComplete
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.exe
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.pdb
