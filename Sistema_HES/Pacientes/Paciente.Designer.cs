@@ -68,6 +68,7 @@ namespace Sistema_HES
             // BtnBuscar
             // 
             this.BtnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscar.Location = new System.Drawing.Point(595, 222);
             this.BtnBuscar.Name = "BtnBuscar";
@@ -80,6 +81,7 @@ namespace Sistema_HES
             // BtnCerrar
             // 
             this.BtnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCerrar.Location = new System.Drawing.Point(741, 222);
             this.BtnCerrar.Name = "BtnCerrar";
@@ -92,6 +94,7 @@ namespace Sistema_HES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(977, 314);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.BtnBuscar);

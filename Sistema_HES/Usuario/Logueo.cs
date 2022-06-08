@@ -26,5 +26,15 @@ namespace Sistema_HES
             registro.Show();
             //this.Hide();
         }
+
+        private void Logueo_MaximizedBoundsChanged(object sender, System.EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox2_Click(object sender, System.EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

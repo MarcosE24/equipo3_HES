@@ -250,6 +250,7 @@ namespace Sistema_HES
             // BtnGuardar
             // 
             this.BtnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI Black", 10F);
             this.BtnGuardar.Location = new System.Drawing.Point(672, 366);
             this.BtnGuardar.Name = "BtnGuardar";
@@ -262,6 +263,7 @@ namespace Sistema_HES
             // BtnCerrar
             // 
             this.BtnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Font = new System.Drawing.Font("Segoe UI Black", 10F);
             this.BtnCerrar.Location = new System.Drawing.Point(672, 412);
             this.BtnCerrar.Name = "BtnCerrar";
@@ -308,10 +310,12 @@ namespace Sistema_HES
             this.DgwVistaDias.Name = "DgwVistaDias";
             this.DgwVistaDias.Size = new System.Drawing.Size(576, 150);
             this.DgwVistaDias.TabIndex = 14;
+            this.DgwVistaDias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwVistaDias_CellContentClick);
             // 
             // btnEditar
             // 
             this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI Black", 10F);
             this.btnEditar.Location = new System.Drawing.Point(672, 320);
             this.btnEditar.Name = "btnEditar";
@@ -324,6 +328,7 @@ namespace Sistema_HES
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI Black", 10F);
             this.btnEliminar.Location = new System.Drawing.Point(672, 274);
             this.btnEliminar.Name = "btnEliminar";
@@ -337,6 +342,7 @@ namespace Sistema_HES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(833, 491);
             this.Controls.Add(this.DgwVistaDias);
             this.Controls.Add(this.groupBox1);

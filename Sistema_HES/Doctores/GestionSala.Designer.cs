@@ -46,6 +46,7 @@ namespace Sistema_HES
             // 
             // BtnAgregar
             // 
+            this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.Location = new System.Drawing.Point(101, 368);
             this.BtnAgregar.Name = "BtnAgregar";
@@ -58,6 +59,7 @@ namespace Sistema_HES
             // BtnEliminar
             // 
             this.BtnEliminar.Enabled = false;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.Location = new System.Drawing.Point(408, 368);
             this.BtnEliminar.Name = "BtnEliminar";
@@ -79,6 +81,7 @@ namespace Sistema_HES
             // 
             // BtnCerrar
             // 
+            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCerrar.Location = new System.Drawing.Point(572, 368);
             this.BtnCerrar.Name = "BtnCerrar";
@@ -90,6 +93,7 @@ namespace Sistema_HES
             // BtnEditar
             // 
             this.BtnEditar.Enabled = false;
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Location = new System.Drawing.Point(255, 368);
             this.BtnEditar.Name = "BtnEditar";
@@ -101,6 +105,7 @@ namespace Sistema_HES
             // 
             // DgwVista
             // 
+            this.DgwVista.BackgroundColor = System.Drawing.Color.White;
             this.DgwVista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgwVista.Location = new System.Drawing.Point(233, 68);
             this.DgwVista.Name = "DgwVista";
@@ -163,6 +168,7 @@ namespace Sistema_HES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

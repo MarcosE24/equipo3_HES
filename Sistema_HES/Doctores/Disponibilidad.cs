@@ -132,5 +132,10 @@ namespace Sistema_HES
             }
             return 0;
         }
+
+        private void DgwVistaDias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

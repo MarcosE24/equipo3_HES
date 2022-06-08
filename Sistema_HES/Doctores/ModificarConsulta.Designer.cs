@@ -96,6 +96,7 @@ namespace Sistema_HES
             // BtnCerrar
             // 
             this.BtnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCerrar.Location = new System.Drawing.Point(754, 473);
             this.BtnCerrar.Name = "BtnCerrar";
@@ -111,6 +112,7 @@ namespace Sistema_HES
             this.DgwListaConsulta.AllowUserToResizeColumns = false;
             this.DgwListaConsulta.AllowUserToResizeRows = false;
             this.DgwListaConsulta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DgwListaConsulta.BackgroundColor = System.Drawing.Color.White;
             this.DgwListaConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgwListaConsulta.Location = new System.Drawing.Point(12, 54);
             this.DgwListaConsulta.MultiSelect = false;
@@ -137,6 +139,7 @@ namespace Sistema_HES
             // 
             this.BtnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEditar.Enabled = false;
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Location = new System.Drawing.Point(480, 473);
             this.BtnEditar.Name = "BtnEditar";
@@ -166,13 +169,14 @@ namespace Sistema_HES
             this.CbxHora.FormattingEnabled = true;
             this.CbxHora.Location = new System.Drawing.Point(278, 455);
             this.CbxHora.Name = "CbxHora";
-            this.CbxHora.Size = new System.Drawing.Size(121, 26);
+            this.CbxHora.Size = new System.Drawing.Size(121, 28);
             this.CbxHora.TabIndex = 15;
             // 
             // BtnEliminar
             // 
             this.BtnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEliminar.Enabled = false;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.Location = new System.Drawing.Point(617, 473);
             this.BtnEliminar.Name = "BtnEliminar";
@@ -214,7 +218,7 @@ namespace Sistema_HES
             this.LblMedico.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMedico.Location = new System.Drawing.Point(462, 323);
             this.LblMedico.Name = "LblMedico";
-            this.LblMedico.Size = new System.Drawing.Size(66, 18);
+            this.LblMedico.Size = new System.Drawing.Size(67, 20);
             this.LblMedico.TabIndex = 18;
             this.LblMedico.Text = "Medico";
             // 
@@ -235,13 +239,14 @@ namespace Sistema_HES
             this.CbxEspecialidad.FormattingEnabled = true;
             this.CbxEspecialidad.Location = new System.Drawing.Point(136, 320);
             this.CbxEspecialidad.Name = "CbxEspecialidad";
-            this.CbxEspecialidad.Size = new System.Drawing.Size(189, 26);
+            this.CbxEspecialidad.Size = new System.Drawing.Size(189, 28);
             this.CbxEspecialidad.TabIndex = 20;
             // 
             // ModificarConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(931, 540);
             this.Controls.Add(this.CbxEspecialidad);
             this.Controls.Add(this.Calendario);
