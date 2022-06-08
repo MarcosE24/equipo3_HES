@@ -9,8 +9,10 @@ namespace Sistema_HES
     public class Conexion   //Clase para la conexion con la base de datos
     {
         public MySqlConnection conexion = new MySqlConnection("server=localhost;database=sys_hes;uid=root;pwd=12345");
+        
         public Conexion()
         {
+
         }
         public bool Ini_Sesion(string ci, string contraseña,Label LblError)     //funcion que verifica en las tablas correspondientes si dicho usuario y contraseña son correctos o si existen
         {
@@ -93,6 +95,7 @@ namespace Sistema_HES
             }
             return false;
         }
+        
         public void SinRetorno(string query)    //hace operaciones que no devuelven nada como insertar, eliminar o modificar
         {
             try //intenta la conexion con la base de datos y la operacion sin retorno
@@ -109,6 +112,7 @@ namespace Sistema_HES
                 conexion.Close();
             }
         }
+        
         public DataTable VistaTabla(string query)   //hace las consultas en las que se devuelve una tabla
         {
             conexion.Open();
@@ -119,6 +123,7 @@ namespace Sistema_HES
             conexion.Close();
             return tabla;
         }
+        
         public bool VerificarDato(string query)     //funcion que verifica si cierto dato existe en la base de datos
         {
             MySqlCommand comando = new MySqlCommand(query, conexion);
@@ -144,6 +149,7 @@ namespace Sistema_HES
             }
             return false;
         }
+        
         public DataTable ObtenerDatos(string query)       //metodo que devuelve un dato de tipo DataReader, devolviendo una fila completa de datos
         {
             MySqlCommand comando = new MySqlCommand(query, conexion);

@@ -24,7 +24,7 @@ namespace Sistema_HES
 
             if (CbxDoctor.Text != "" && CbxEspecialidad.Text != "" && TbxCodigo.Text != "" && TbxSala.Text != "")
             {
-                string query = "im=nsert into medico values (\"" + CbxDoctor.Text + "\", \"" + CbxEspecialidad.Text + "\",\"" + TbxCodigo.Text + "\",\"" + TbxSala.Text + "\",\" pendiente \")";
+                string query = "insert into medico values (\"" + CbxDoctor.Text + "\", \"" + CbxEspecialidad.Text + "\",\"" + TbxCodigo.Text + "\",\"" + TbxSala.Text + "\",\" pendiente \")";
                 conexion.SinRetorno(query);
             }
             else

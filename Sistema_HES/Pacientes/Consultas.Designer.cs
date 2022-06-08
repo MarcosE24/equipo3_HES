@@ -227,6 +227,7 @@ namespace Sistema_HES
             this.CbxEspecialidad.Name = "CbxEspecialidad";
             this.CbxEspecialidad.Size = new System.Drawing.Size(190, 28);
             this.CbxEspecialidad.TabIndex = 22;
+            this.CbxEspecialidad.SelectedValueChanged += new System.EventHandler(this.CargaMedicoSala);
             // 
             // LblDoctor
             // 

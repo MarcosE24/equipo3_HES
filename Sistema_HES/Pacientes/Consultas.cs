@@ -26,16 +26,19 @@ namespace Sistema_HES
             else
                 MessageBox.Show("Todos los campos son requeridos");
         }
+
         private void Calendario_DateSelected(object sender, DateRangeEventArgs e)
         {
             tiempo = Calendario.SelectionStart;
             if (tiempo>=DateTime.Now.Date)   //solo puede elegir desde la fecha actualen adelante
             {
-                //MessageBox.Show("entra");
+                MessageBox.Show("entra");
                 fecha = tiempo.ToString().Split(' ');
+                MessageBox.Show(fecha[0]);
                 TbxFecha.Text = fecha[0];
             }
         }
+
         void ObtenerHoras(object sender, EventArgs e)
         {
             int i;
@@ -49,6 +52,7 @@ namespace Sistema_HES
                 }
             }
         }
+
         void CargarEspecialidad()
         {
             int i;
@@ -58,6 +62,13 @@ namespace Sistema_HES
                 CbxEspecialidad.Items.Add(tabla.Rows[i][0].ToString());
             }
         }
+        
+        void CargaMedicoSala()
+        {
+            DataTable tabla = conexion.ObtenerDatos("select nombre from medico where especialidad=\"" + CbxEspecialidad.Text + "\"");
+            LblDoctor.Text = tabla.Rows.ToString();
+        }
+
         public string Horas(int i)
         {
             switch(i)
@@ -98,14 +109,16 @@ namespace Sistema_HES
             return null;
         }
 
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void CargaMedicoSala(object sender, EventArgs e)
+        {
+            DataTable tabla = conexion.ObtenerDatos("select nombre, sala from medico where especialidad=\"" + CbxEspecialidad.Text + "\"");
+            LblDoctor.Text = tabla.Rows[0][0].ToString();
+            LblSala.Text = tabla.Rows[0][1].ToString();
         }
     }
 }

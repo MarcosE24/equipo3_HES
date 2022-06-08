@@ -103,6 +103,7 @@ namespace Sistema_HES
             this.BtnCerrar.TabIndex = 8;
             this.BtnCerrar.Text = "Cerrar";
             this.BtnCerrar.UseVisualStyleBackColor = true;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // DgwListaConsulta
             // 
@@ -166,7 +167,7 @@ namespace Sistema_HES
             this.CbxHora.FormattingEnabled = true;
             this.CbxHora.Location = new System.Drawing.Point(278, 455);
             this.CbxHora.Name = "CbxHora";
-            this.CbxHora.Size = new System.Drawing.Size(121, 26);
+            this.CbxHora.Size = new System.Drawing.Size(121, 28);
             this.CbxHora.TabIndex = 15;
             // 
             // BtnEliminar
@@ -214,7 +215,7 @@ namespace Sistema_HES
             this.LblMedico.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMedico.Location = new System.Drawing.Point(462, 323);
             this.LblMedico.Name = "LblMedico";
-            this.LblMedico.Size = new System.Drawing.Size(66, 18);
+            this.LblMedico.Size = new System.Drawing.Size(67, 20);
             this.LblMedico.TabIndex = 18;
             this.LblMedico.Text = "Medico";
             // 
@@ -235,7 +236,7 @@ namespace Sistema_HES
             this.CbxEspecialidad.FormattingEnabled = true;
             this.CbxEspecialidad.Location = new System.Drawing.Point(136, 320);
             this.CbxEspecialidad.Name = "CbxEspecialidad";
-            this.CbxEspecialidad.Size = new System.Drawing.Size(189, 26);
+            this.CbxEspecialidad.Size = new System.Drawing.Size(189, 28);
             this.CbxEspecialidad.TabIndex = 20;
             // 
             // ModificarConsulta
