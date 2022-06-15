@@ -7,11 +7,13 @@ namespace Sistema_HES
     {
         Conexion conexion = new Conexion();
         int fila;
+        
         public GestionarMedico()
         {
             InitializeComponent();
             CargaVista();
         }
+        
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
             if (conexion.VerificarDato("select * from medico where Ci = " + TbxCi.Text))
