@@ -106,17 +106,14 @@ D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Sistema_HES.exe.confi
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Sistema_HES.exe
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Sistema_HES.pdb
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Google.Protobuf.dll
-D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Zstandard.Net.dll
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\K4os.Compression.LZ4.Streams.dll
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\BouncyCastle.Crypto.dll
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Ubiety.Dns.Core.dll
-D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\Renci.SshNet.dll
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\System.Memory.dll
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\System.Buffers.dll
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\K4os.Compression.LZ4.dll
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\K4os.Hash.xxHash.dll
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\System.Numerics.Vectors.dll
-D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\MySql.Data.xml
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.csproj.AssemblyReference.cache
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.csproj.SuggestedBindingRedirects.cache
@@ -177,3 +174,5 @@ C:\Users\hp\Desktop\Repositorio\equipo3_HES\Sistema_HES\obj\Debug\Sistema_HES.cs
 C:\Users\hp\Desktop\Repositorio\equipo3_HES\Sistema_HES\obj\Debug\Sistema_HES.csproj.CopyComplete
 C:\Users\hp\Desktop\Repositorio\equipo3_HES\Sistema_HES\obj\Debug\Sistema_HES.exe
 C:\Users\hp\Desktop\Repositorio\equipo3_HES\Sistema_HES\obj\Debug\Sistema_HES.pdb
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\MySql.Data.dll
+D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\bin\Debug\ZstdNet.dll

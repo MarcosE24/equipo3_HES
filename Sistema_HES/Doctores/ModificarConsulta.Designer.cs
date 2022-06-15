@@ -76,7 +76,7 @@ namespace Sistema_HES
             this.TbxFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TbxFecha.Enabled = false;
             this.TbxFecha.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxFecha.Location = new System.Drawing.Point(285, 392);
+            this.TbxFecha.Location = new System.Drawing.Point(332, 393);
             this.TbxFecha.Name = "TbxFecha";
             this.TbxFecha.Size = new System.Drawing.Size(187, 26);
             this.TbxFecha.TabIndex = 4;
@@ -87,7 +87,7 @@ namespace Sistema_HES
             this.label2.AutoSize = true;
             this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(229, 395);
+            this.label2.Location = new System.Drawing.Point(276, 396);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 18);
             this.label2.TabIndex = 7;
@@ -156,7 +156,7 @@ namespace Sistema_HES
             this.label5.AutoSize = true;
             this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(229, 458);
+            this.label5.Location = new System.Drawing.Point(276, 459);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 18);
             this.label5.TabIndex = 14;
@@ -168,7 +168,7 @@ namespace Sistema_HES
             this.CbxHora.Enabled = false;
             this.CbxHora.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxHora.FormattingEnabled = true;
-            this.CbxHora.Location = new System.Drawing.Point(278, 455);
+            this.CbxHora.Location = new System.Drawing.Point(325, 456);
             this.CbxHora.Name = "CbxHora";
             this.CbxHora.Size = new System.Drawing.Size(121, 28);
             this.CbxHora.TabIndex = 15;

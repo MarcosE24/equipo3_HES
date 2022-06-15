@@ -16,16 +16,23 @@ namespace Sistema_HES
         Conexion conexion = new Conexion();
         StreamReader archivo = new StreamReader(@"Rol.txt");
         string[] operador;
+        
         public Disponibilidad()
         {
             InitializeComponent();
         }
+        
         private void Disponibilidad_Load(object sender, EventArgs e)
         {
+            
             operador = archivo.ReadLine().Split(',');
-            if(conexion.VerificarDato("select * from dias where ci=" + operador[1]))
+            
+            if (conexion.VerificarDato("select * from dias where ci=" + operador[1]))
+            {
                 DgwVistaDias.DataSource = conexion.ObtenerDatos("select * from dias where ci=" + operador[1]);
+            }
         }
+        
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             if (RbtnMatutino.Checked == true)
@@ -58,41 +65,54 @@ namespace Sistema_HES
                     MessageBox.Show("Debe de Elegir un horario acorde, o uno que este en la lista");
             }
         }
-        void Dias(string horario)
-        {
-            if (RbtnLunes.Checked == true)
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        { 
+            if (DgwVistaDias.CurrentCell == null)
             {
-                conexion.SinRetorno("insert into dias(Ci,Lunes) values(" + operador[1] + ",\"" + horario + "\";");
+                MessageBox.Show("no hay nada en la celda");
             }
-            if (RbtnMartes.Checked == true)
-            {
-                conexion.SinRetorno("insert into dias(Ci,Martes) values(" + operador[1] + ",\"" + horario + "\";");
-            }
-            if (RbtnMiercoles.Checked == true)
-            {
-                conexion.SinRetorno("insert into dias(Ci,Miercoles) values(" + operador[1] + ",\"" + horario + "\";");
-            }
-            if (RbtnJueves.Checked == true)
-            {
-                conexion.SinRetorno("insert into dias(Ci,Jueves) values(" + operador[1] + ",\"" + horario + "\";");
-            }
-            if (RbtnViernes.Checked == true)
-            {
-                conexion.SinRetorno("insert into dias(Ci,Viernes) values(" + operador[1] + ",\"" + horario + "\";");
-            }
-            if (RbtnSabado.Checked == true)
-            {
-                conexion.SinRetorno("insert into dias(Ci,Sabado) values(" + operador[1] + ",\"" + horario + "\";");
-            }
-            if (RbtnDomingo.Checked == true)
-            {
-                conexion.SinRetorno("insert into dias(Ci,Domingo) values(" + operador[1] + ",\"" + horario + "\";");
-            }
+            else
+                MessageBox.Show(DgwVistaDias.CurrentCell.ToString());
         }
+
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        void Dias(string horario)
+        {
+            if (RbtnLunes.Checked == true)
+            {
+                conexion.SinRetorno("insert into dias (Ci, Lunes) values(" + operador[1] + ",\"" + horario + "\");");
+            }
+            if (RbtnMartes.Checked == true)
+            {
+                conexion.SinRetorno("insert into dias(Ci,Martes) values(" + operador[1] + ",\"" + horario + "\");");
+            }
+            if (RbtnMiercoles.Checked == true)
+            {
+                conexion.SinRetorno("insert into dias(Ci,Miercoles) values(" + operador[1] + ",\"" + horario + "\");");
+            }
+            if (RbtnJueves.Checked == true)
+            {
+                conexion.SinRetorno("insert into dias(Ci,Jueves) values(" + operador[1] + ",\"" + horario + "\");");
+            }
+            if (RbtnViernes.Checked == true)
+            {
+                conexion.SinRetorno("insert into dias(Ci,Viernes) values(" + operador[1] + ",\"" + horario + "\");");
+            }
+            if (RbtnSabado.Checked == true)
+            {
+                conexion.SinRetorno("insert into dias(Ci,Sabado) values(" + operador[1] + ",\"" + horario + "\");");
+            }
+            if (RbtnDomingo.Checked == true)
+            {
+                conexion.SinRetorno("insert into dias(Ci,Domingo) values(" + operador[1] + ",\"" + horario + "\");");
+            }
+        }
+                
         int IndiceHora(string hora)
         {
             switch(hora)
@@ -133,9 +153,12 @@ namespace Sistema_HES
             return 0;
         }
 
-        private void DgwVistaDias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DgwVistaDias_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (BtnEliminar.Enabled == false)
+            {
+                BtnEliminar.Enabled = true;
+            }
         }
     }
 }

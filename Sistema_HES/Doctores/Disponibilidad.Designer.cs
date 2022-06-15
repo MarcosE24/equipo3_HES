@@ -48,8 +48,7 @@ namespace Sistema_HES
             this.RbtnLunes = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DgwVistaDias = new System.Windows.Forms.DataGridView();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgwVistaDias)).BeginInit();
@@ -240,7 +239,7 @@ namespace Sistema_HES
             this.groupBox3.Controls.Add(this.RbtnVespertino);
             this.groupBox3.Controls.Add(this.CbxHoraInicio);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(78, 335);
+            this.groupBox3.Location = new System.Drawing.Point(90, 362);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(510, 117);
             this.groupBox3.TabIndex = 9;
@@ -252,7 +251,7 @@ namespace Sistema_HES
             this.BtnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI Black", 10F);
-            this.BtnGuardar.Location = new System.Drawing.Point(672, 366);
+            this.BtnGuardar.Location = new System.Drawing.Point(712, 408);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(120, 40);
             this.BtnGuardar.TabIndex = 10;
@@ -265,7 +264,7 @@ namespace Sistema_HES
             this.BtnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Font = new System.Drawing.Font("Segoe UI Black", 10F);
-            this.BtnCerrar.Location = new System.Drawing.Point(672, 412);
+            this.BtnCerrar.Location = new System.Drawing.Point(712, 454);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(120, 40);
             this.BtnCerrar.TabIndex = 11;
@@ -295,7 +294,7 @@ namespace Sistema_HES
             this.groupBox1.Controls.Add(this.RbtnMartes);
             this.groupBox1.Controls.Add(this.RbtnSabado);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(37, 246);
+            this.groupBox1.Location = new System.Drawing.Point(57, 274);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(618, 67);
             this.groupBox1.TabIndex = 13;
@@ -306,49 +305,36 @@ namespace Sistema_HES
             // 
             this.DgwVistaDias.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgwVistaDias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgwVistaDias.Location = new System.Drawing.Point(137, 90);
+            this.DgwVistaDias.Location = new System.Drawing.Point(57, 33);
             this.DgwVistaDias.Name = "DgwVistaDias";
-            this.DgwVistaDias.Size = new System.Drawing.Size(576, 150);
+            this.DgwVistaDias.Size = new System.Drawing.Size(760, 211);
             this.DgwVistaDias.TabIndex = 14;
-            this.DgwVistaDias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwVistaDias_CellContentClick);
+            this.DgwVistaDias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwVistaDias_CellClick);
             // 
-            // btnEditar
+            // BtnEliminar
             // 
-            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Segoe UI Black", 10F);
-            this.btnEditar.Location = new System.Drawing.Point(672, 320);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(120, 40);
-            this.btnEditar.TabIndex = 10;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI Black", 10F);
-            this.btnEliminar.Location = new System.Drawing.Point(672, 274);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(120, 40);
-            this.btnEliminar.TabIndex = 10;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            this.BtnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnEliminar.Enabled = false;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Font = new System.Drawing.Font("Segoe UI Black", 10F);
+            this.BtnEliminar.Location = new System.Drawing.Point(712, 362);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(120, 40);
+            this.BtnEliminar.TabIndex = 10;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // Disponibilidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(833, 491);
+            this.ClientSize = new System.Drawing.Size(872, 524);
             this.Controls.Add(this.DgwVistaDias);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnCerrar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -384,7 +370,6 @@ namespace Sistema_HES
         private System.Windows.Forms.RadioButton RbtnLunes;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView DgwVistaDias;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button BtnEliminar;
     }
 }

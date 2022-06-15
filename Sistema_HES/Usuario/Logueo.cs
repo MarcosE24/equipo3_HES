@@ -5,6 +5,7 @@ namespace Sistema_HES
     public partial class Logueo : Form
     {
         Conexion conexion = new Conexion();
+        
         public Logueo()
         {
             InitializeComponent();

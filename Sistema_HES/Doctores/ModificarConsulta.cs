@@ -11,14 +11,24 @@ namespace Sistema_HES
         DateTime tiempo = new DateTime();
         string[] fecha;
         string fechavieja;
+        
         public ModificarConsulta()
         {
             InitializeComponent();
         }
+
+        private void ModificarConsulta_Load(object sender, EventArgs e)
+        {
+            CargaVista();
+            DgwListaConsulta.ClearSelection();
+            CargarEspecialidad();
+        }
+
         void CargaVista()   //metodo que carga la vista de tabla
         {
             DgwListaConsulta.DataSource = conexion.VistaTabla("select * from consulta where ci=12345 and estado=\"reservado\";");
         }
+        
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             int fila = DgwListaConsulta.CurrentRow.Index;
@@ -79,12 +89,7 @@ namespace Sistema_HES
                     MessageBox.Show("Ya no puede cambiar la fecha de la cita una vez que queda menos 48 horas");
             }
         }
-        private void ModificarConsulta_Load(object sender, EventArgs e)
-        {
-            CargaVista();
-            DgwListaConsulta.ClearSelection();
-            CargarEspecialidad();
-        }
+        
         private void DgwListaConsulta_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(BtnEditar.Enabled != true && BtnEliminar.Enabled != true)
@@ -93,6 +98,7 @@ namespace Sistema_HES
                 BtnEliminar.Enabled = true;
             }
         }
+
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             int fila = DgwListaConsulta.CurrentRow.Index;
@@ -101,6 +107,7 @@ namespace Sistema_HES
             BtnEliminar.Enabled = false;
             BtnEditar.Enabled = false;
         }
+
         void CargarEspecialidad()
         {
             int i;
@@ -110,6 +117,7 @@ namespace Sistema_HES
                 CbxEspecialidad.Items.Add(tabla.Rows[i][0].ToString());
             }
         }
+
         void ObtenerHoras()
         {
             int i;
@@ -133,16 +141,18 @@ namespace Sistema_HES
                 }
             }
         }
+
         private void Calendario_DateSelected(object sender, DateRangeEventArgs e)
         {
             tiempo = Calendario.SelectionStart;
-            if (tiempo > DateTime.Now.Date)   //solo puede elegir desde la fecha actualen adelante
+            if (tiempo > DateTime.Now.Date)   //solo puede elegir desde la fecha actual en adelante
             {
                 fecha = tiempo.ToString().Split(' ');
                 TbxFecha.Text = fecha[0];
                 ObtenerHoras();
             }
         }
+        
         bool FechaMargen()
         {
             DateTime fecha1 = Convert.ToDateTime(fechavieja.Replace('/', '-') + " 00:00:01");

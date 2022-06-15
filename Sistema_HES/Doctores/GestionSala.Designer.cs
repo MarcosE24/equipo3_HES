@@ -46,9 +46,10 @@ namespace Sistema_HES
             // 
             // BtnAgregar
             // 
+            this.BtnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.Location = new System.Drawing.Point(101, 368);
+            this.BtnAgregar.Location = new System.Drawing.Point(85, 378);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(110, 37);
             this.BtnAgregar.TabIndex = 0;
@@ -58,10 +59,11 @@ namespace Sistema_HES
             // 
             // BtnEliminar
             // 
+            this.BtnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEliminar.Enabled = false;
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminar.Location = new System.Drawing.Point(408, 368);
+            this.BtnEliminar.Location = new System.Drawing.Point(392, 378);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(116, 37);
             this.BtnEliminar.TabIndex = 1;
@@ -71,19 +73,21 @@ namespace Sistema_HES
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 21);
+            this.label1.Location = new System.Drawing.Point(228, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(318, 44);
+            this.label1.Size = new System.Drawing.Size(317, 44);
             this.label1.TabIndex = 3;
             this.label1.Text = "GESTOR DE SALA";
             // 
             // BtnCerrar
             // 
+            this.BtnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCerrar.Location = new System.Drawing.Point(572, 368);
+            this.BtnCerrar.Location = new System.Drawing.Point(556, 378);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(115, 37);
             this.BtnCerrar.TabIndex = 4;
@@ -92,10 +96,11 @@ namespace Sistema_HES
             // 
             // BtnEditar
             // 
+            this.BtnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEditar.Enabled = false;
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEditar.Location = new System.Drawing.Point(255, 368);
+            this.BtnEditar.Location = new System.Drawing.Point(239, 378);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(110, 37);
             this.BtnEditar.TabIndex = 5;
@@ -105,9 +110,10 @@ namespace Sistema_HES
             // 
             // DgwVista
             // 
+            this.DgwVista.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgwVista.BackgroundColor = System.Drawing.Color.White;
             this.DgwVista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgwVista.Location = new System.Drawing.Point(233, 68);
+            this.DgwVista.Location = new System.Drawing.Point(217, 78);
             this.DgwVista.Name = "DgwVista";
             this.DgwVista.Size = new System.Drawing.Size(339, 150);
             this.DgwVista.TabIndex = 6;
@@ -115,30 +121,34 @@ namespace Sistema_HES
             // 
             // TbxNombre
             // 
-            this.TbxNombre.Location = new System.Drawing.Point(60, 290);
+            this.TbxNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TbxNombre.Location = new System.Drawing.Point(44, 300);
             this.TbxNombre.Name = "TbxNombre";
             this.TbxNombre.Size = new System.Drawing.Size(218, 21);
             this.TbxNombre.TabIndex = 7;
             // 
             // TbxArea
             // 
-            this.TbxArea.Location = new System.Drawing.Point(320, 290);
+            this.TbxArea.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TbxArea.Location = new System.Drawing.Point(304, 300);
             this.TbxArea.Name = "TbxArea";
             this.TbxArea.Size = new System.Drawing.Size(187, 21);
             this.TbxArea.TabIndex = 8;
             // 
             // TbxNumero
             // 
-            this.TbxNumero.Location = new System.Drawing.Point(609, 290);
+            this.TbxNumero.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TbxNumero.Location = new System.Drawing.Point(593, 300);
             this.TbxNumero.Name = "TbxNumero";
             this.TbxNumero.Size = new System.Drawing.Size(50, 21);
             this.TbxNumero.TabIndex = 9;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Black", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(75, 240);
+            this.label2.Location = new System.Drawing.Point(59, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(192, 26);
             this.label2.TabIndex = 10;
@@ -146,9 +156,10 @@ namespace Sistema_HES
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Black", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(540, 240);
+            this.label3.Location = new System.Drawing.Point(524, 250);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 26);
             this.label3.TabIndex = 11;
@@ -156,9 +167,10 @@ namespace Sistema_HES
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Black", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(390, 240);
+            this.label4.Location = new System.Drawing.Point(374, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 26);
             this.label4.TabIndex = 12;
@@ -183,6 +195,7 @@ namespace Sistema_HES
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnAgregar);
             this.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GestionSala";
             this.Text = "GestionSala";
             ((System.ComponentModel.ISupportInitialize)(this.DgwVista)).EndInit();

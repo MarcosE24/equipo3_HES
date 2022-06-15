@@ -46,7 +46,7 @@ namespace Sistema_HES
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(165, 43);
+            this.label1.Location = new System.Drawing.Point(208, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(349, 42);
             this.label1.TabIndex = 0;
@@ -56,7 +56,7 @@ namespace Sistema_HES
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 150);
+            this.label2.Location = new System.Drawing.Point(75, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 19);
             this.label2.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace Sistema_HES
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(88, 195);
+            this.label3.Location = new System.Drawing.Point(131, 220);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 19);
             this.label3.TabIndex = 2;
@@ -76,7 +76,7 @@ namespace Sistema_HES
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(151, 238);
+            this.label4.Location = new System.Drawing.Point(194, 263);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 19);
             this.label4.TabIndex = 3;
@@ -85,7 +85,7 @@ namespace Sistema_HES
             // CbxDoctor
             // 
             this.CbxDoctor.FormattingEnabled = true;
-            this.CbxDoctor.Location = new System.Drawing.Point(205, 148);
+            this.CbxDoctor.Location = new System.Drawing.Point(248, 173);
             this.CbxDoctor.Name = "CbxDoctor";
             this.CbxDoctor.Size = new System.Drawing.Size(191, 21);
             this.CbxDoctor.TabIndex = 5;
@@ -93,21 +93,21 @@ namespace Sistema_HES
             // CbxEspecialidad
             // 
             this.CbxEspecialidad.FormattingEnabled = true;
-            this.CbxEspecialidad.Location = new System.Drawing.Point(217, 193);
+            this.CbxEspecialidad.Location = new System.Drawing.Point(260, 218);
             this.CbxEspecialidad.Name = "CbxEspecialidad";
             this.CbxEspecialidad.Size = new System.Drawing.Size(179, 21);
             this.CbxEspecialidad.TabIndex = 6;
             // 
             // TbxCodigo
             // 
-            this.TbxCodigo.Location = new System.Drawing.Point(239, 237);
+            this.TbxCodigo.Location = new System.Drawing.Point(282, 262);
             this.TbxCodigo.Name = "TbxCodigo";
             this.TbxCodigo.Size = new System.Drawing.Size(157, 20);
             this.TbxCodigo.TabIndex = 7;
             // 
             // TbxSala
             // 
-            this.TbxSala.Location = new System.Drawing.Point(263, 288);
+            this.TbxSala.Location = new System.Drawing.Point(306, 313);
             this.TbxSala.Name = "TbxSala";
             this.TbxSala.Size = new System.Drawing.Size(133, 20);
             this.TbxSala.TabIndex = 8;
@@ -115,7 +115,7 @@ namespace Sistema_HES
             // BtnGuardar
             // 
             this.BtnGuardar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar.Location = new System.Drawing.Point(498, 181);
+            this.BtnGuardar.Location = new System.Drawing.Point(541, 206);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(86, 33);
             this.BtnGuardar.TabIndex = 10;
@@ -126,7 +126,7 @@ namespace Sistema_HES
             // BtnCancelar
             // 
             this.BtnCancelar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.Location = new System.Drawing.Point(498, 273);
+            this.BtnCancelar.Location = new System.Drawing.Point(541, 298);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(86, 35);
             this.BtnCancelar.TabIndex = 11;
@@ -138,7 +138,7 @@ namespace Sistema_HES
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(151, 289);
+            this.label5.Location = new System.Drawing.Point(194, 314);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 19);
             this.label5.TabIndex = 12;
@@ -160,6 +160,7 @@ namespace Sistema_HES
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AsignacionSala";
             this.Text = "ModificarMedico";
             this.ResumeLayout(false);
