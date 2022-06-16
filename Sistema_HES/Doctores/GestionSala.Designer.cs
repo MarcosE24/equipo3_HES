@@ -78,7 +78,7 @@ namespace Sistema_HES
             this.label1.Font = new System.Drawing.Font("Arial Black", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(228, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(318, 44);
+            this.label1.Size = new System.Drawing.Size(317, 44);
             this.label1.TabIndex = 3;
             this.label1.Text = "GESTOR DE SALA";
             // 
@@ -199,7 +199,6 @@ namespace Sistema_HES
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GestionSala";
             this.Text = "GestionSala";
-            this.Load += new System.EventHandler(this.GestionSala_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgwVista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

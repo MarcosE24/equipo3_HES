@@ -126,7 +126,6 @@ D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Historial
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Inicio.resources
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Logueo.resources
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.ModificarConsulta.resources
-D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.AsignacionSala.resources
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.ModificarUsuario.resources
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Paciente.resources
 D:\Marcos\Documents\LP2\Proyecto Hes\Sistema_HES\obj\Debug\Sistema_HES.Pendientes.resources

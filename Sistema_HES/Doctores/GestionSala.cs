@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
 using System.Windows.Forms;
 
 namespace Sistema_HES
@@ -15,11 +7,13 @@ namespace Sistema_HES
     {
         Conexion conexion = new Conexion();
         int fila;
+        
         public GestionSala()
         {
             InitializeComponent();
             CargaVista();
         }
+        
         void CargaVista()
         {
             DgwVista.DataSource = conexion.ObtenerDatos("select * from sala");
@@ -30,6 +24,7 @@ namespace Sistema_HES
             BtnEditar.Enabled = true;
             BtnEliminar.Enabled = true;
             BtnAgregar.Enabled = false;
+            BtnCerrar.Text = "Cancelar";
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
@@ -66,6 +61,7 @@ namespace Sistema_HES
             BtnEditar.Enabled = false;
             BtnEliminar.Enabled = false;
             BtnAgregar.Enabled = true;
+            BtnCerrar.Text = "Cerrar";
             CargaVista();
         }
 
@@ -75,17 +71,22 @@ namespace Sistema_HES
             {
                 conexion.SinRetorno("insert into sala values(" + TbxNumero.Text + ",\"" + TbxNombre.Text + "\",\"" + TbxArea.Text + "\");");
             }
+            else
+                MessageBox.Show("Rellene todos los campos");
             CargaVista();
-        }
-
-        private void GestionSala_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(BtnCerrar.Text=="Cerrar")
+                this.Close();
+            else
+            {
+                BtnAgregar.Enabled = true;
+                BtnEditar.Enabled = false;
+                BtnEliminar.Enabled = false;
+                BtnCerrar.Text = "Cerrar";
+            }
         }
     }
 }
