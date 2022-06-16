@@ -40,6 +40,7 @@ namespace Sistema_HES
             // DgwVista
             // 
             this.DgwVista.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DgwVista.BackgroundColor = System.Drawing.Color.White;
             this.DgwVista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgwVista.Location = new System.Drawing.Point(12, 12);
             this.DgwVista.Name = "DgwVista";

@@ -8,7 +8,7 @@ namespace Sistema_HES
 {
     public class Conexion   //Clase para la conexion con la base de datos
     {
-        public MySqlConnection conexion = new MySqlConnection("server=localhost;database=sys_hes;uid=root;pwd=12345");
+        public MySqlConnection conexion = new MySqlConnection("server=localhost;database=sys_hes;uid=root;pwd=trivial");
         public Conexion()
         {
         }

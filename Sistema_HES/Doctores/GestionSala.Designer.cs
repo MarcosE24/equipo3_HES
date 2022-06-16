@@ -78,7 +78,7 @@ namespace Sistema_HES
             this.label1.Font = new System.Drawing.Font("Arial Black", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(228, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 44);
+            this.label1.Size = new System.Drawing.Size(318, 44);
             this.label1.TabIndex = 3;
             this.label1.Text = "GESTOR DE SALA";
             // 
@@ -93,6 +93,7 @@ namespace Sistema_HES
             this.BtnCerrar.TabIndex = 4;
             this.BtnCerrar.Text = "Cerrar";
             this.BtnCerrar.UseVisualStyleBackColor = true;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // BtnEditar
             // 
@@ -113,9 +114,9 @@ namespace Sistema_HES
             this.DgwVista.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgwVista.BackgroundColor = System.Drawing.Color.White;
             this.DgwVista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgwVista.Location = new System.Drawing.Point(217, 78);
+            this.DgwVista.Location = new System.Drawing.Point(201, 78);
             this.DgwVista.Name = "DgwVista";
-            this.DgwVista.Size = new System.Drawing.Size(339, 150);
+            this.DgwVista.Size = new System.Drawing.Size(364, 150);
             this.DgwVista.TabIndex = 6;
             this.DgwVista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwVista_CellClick);
             // 
@@ -198,6 +199,7 @@ namespace Sistema_HES
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GestionSala";
             this.Text = "GestionSala";
+            this.Load += new System.EventHandler(this.GestionSala_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgwVista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

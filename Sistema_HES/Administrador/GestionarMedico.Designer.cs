@@ -222,25 +222,29 @@ namespace Sistema_HES
             // BtnAgregar
             // 
             this.BtnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnAgregar.BackColor = System.Drawing.Color.MintCream;
+            this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.Location = new System.Drawing.Point(829, 256);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(115, 37);
             this.BtnAgregar.TabIndex = 21;
             this.BtnAgregar.Text = "Agregar";
-            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnCancelar.BackColor = System.Drawing.Color.MintCream;
+            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.Location = new System.Drawing.Point(829, 428);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(115, 39);
             this.BtnCancelar.TabIndex = 22;
             this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // TbxApellido
@@ -273,32 +277,37 @@ namespace Sistema_HES
             // BtnEditar
             // 
             this.BtnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnEditar.BackColor = System.Drawing.Color.MintCream;
             this.BtnEditar.Enabled = false;
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Location = new System.Drawing.Point(829, 299);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(115, 37);
             this.BtnEditar.TabIndex = 27;
             this.BtnEditar.Text = "Editar";
-            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnDesabilitar
             // 
             this.BtnDesabilitar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnDesabilitar.BackColor = System.Drawing.Color.MintCream;
             this.BtnDesabilitar.Enabled = false;
+            this.BtnDesabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDesabilitar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDesabilitar.Location = new System.Drawing.Point(829, 385);
             this.BtnDesabilitar.Name = "BtnDesabilitar";
             this.BtnDesabilitar.Size = new System.Drawing.Size(115, 37);
             this.BtnDesabilitar.TabIndex = 28;
             this.BtnDesabilitar.Text = "Deshabilitar";
-            this.BtnDesabilitar.UseVisualStyleBackColor = true;
+            this.BtnDesabilitar.UseVisualStyleBackColor = false;
             this.BtnDesabilitar.Click += new System.EventHandler(this.BtnDesabilitar_Click);
             // 
             // DgwVista
             // 
             this.DgwVista.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DgwVista.BackgroundColor = System.Drawing.Color.White;
             this.DgwVista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgwVista.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DgwVista.Location = new System.Drawing.Point(12, 72);
@@ -314,14 +323,16 @@ namespace Sistema_HES
             // BtnHabilitar
             // 
             this.BtnHabilitar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnHabilitar.BackColor = System.Drawing.Color.MintCream;
             this.BtnHabilitar.Enabled = false;
+            this.BtnHabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnHabilitar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnHabilitar.Location = new System.Drawing.Point(829, 342);
             this.BtnHabilitar.Name = "BtnHabilitar";
             this.BtnHabilitar.Size = new System.Drawing.Size(115, 37);
             this.BtnHabilitar.TabIndex = 30;
             this.BtnHabilitar.Text = "Habilitar";
-            this.BtnHabilitar.UseVisualStyleBackColor = true;
+            this.BtnHabilitar.UseVisualStyleBackColor = false;
             this.BtnHabilitar.Click += new System.EventHandler(this.BtnHabilitar_Click);
             // 
             // TbxContraseña
@@ -347,6 +358,7 @@ namespace Sistema_HES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(982, 485);
             this.Controls.Add(this.TbxContraseña);
             this.Controls.Add(this.label8);

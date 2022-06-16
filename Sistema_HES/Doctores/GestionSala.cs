@@ -37,9 +37,9 @@ namespace Sistema_HES
             if (BtnEditar.Text=="Editar")
             {
                 fila = DgwVista.CurrentRow.Index;
-                TbxNombre.Text = DgwVista.Rows[fila].Cells[0].Value.ToString();
+                TbxNombre.Text = DgwVista.Rows[fila].Cells[1].Value.ToString();
                 TbxArea.Text = DgwVista.Rows[fila].Cells[2].Value.ToString();
-                TbxNumero.Text = DgwVista.Rows[fila].Cells[1].Value.ToString();
+                TbxNumero.Text = DgwVista.Rows[fila].Cells[0].Value.ToString();
                 BtnEditar.Text = "Guardar";
             }
             else
@@ -71,10 +71,21 @@ namespace Sistema_HES
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            if (TbxNumero.Text == "" && TbxNombre.Text == "" && TbxArea.Text == "")
+            if (TbxNumero.Text != "" && TbxNombre.Text != "" && TbxArea.Text != "")
             {
-                conexion.SinRetorno("insert into sala values(" + TbxNumero.Text + ",\"" + TbxNombre.Text + "\",\"" + TbxArea.Text + "\";");
+                conexion.SinRetorno("insert into sala values(" + TbxNumero.Text + ",\"" + TbxNombre.Text + "\",\"" + TbxArea.Text + "\");");
             }
+            CargaVista();
+        }
+
+        private void GestionSala_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

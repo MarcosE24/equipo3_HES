@@ -304,6 +304,7 @@ namespace Sistema_HES
             // DgwVistaDias
             // 
             this.DgwVistaDias.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DgwVistaDias.BackgroundColor = System.Drawing.Color.White;
             this.DgwVistaDias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgwVistaDias.Location = new System.Drawing.Point(57, 33);
             this.DgwVistaDias.Name = "DgwVistaDias";

@@ -98,12 +98,6 @@
     <Compile Include="Doctores\ModificarConsulta.Designer.cs">
       <DependentUpon>ModificarConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\AsignacionSala.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\AsignacionSala.Designer.cs">
-      <DependentUpon>AsignacionSala.cs</DependentUpon>
-    </Compile>
     <Compile Include="Administrador\ModificarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,9 +147,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctores\ModificarConsulta.resx">
       <DependentUpon>ModificarConsulta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\AsignacionSala.resx">
-      <DependentUpon>AsignacionSala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>

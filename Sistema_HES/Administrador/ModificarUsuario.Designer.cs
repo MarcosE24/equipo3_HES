@@ -137,25 +137,29 @@ namespace Sistema_HES
             // BtnCerrar
             // 
             this.BtnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnCerrar.BackColor = System.Drawing.Color.MintCream;
+            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCerrar.Location = new System.Drawing.Point(520, 405);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(82, 35);
             this.BtnCerrar.TabIndex = 29;
             this.BtnCerrar.Text = "Cerrar";
-            this.BtnCerrar.UseVisualStyleBackColor = true;
+            this.BtnCerrar.UseVisualStyleBackColor = false;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // BtnEditar
             // 
             this.BtnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnEditar.BackColor = System.Drawing.Color.MintCream;
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Location = new System.Drawing.Point(257, 405);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(82, 35);
             this.BtnEditar.TabIndex = 28;
             this.BtnEditar.Text = "Editar";
-            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // TbxContraseña
@@ -259,6 +263,7 @@ namespace Sistema_HES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(870, 536);
             this.Controls.Add(this.TbxEdad);
             this.Controls.Add(this.label9);
