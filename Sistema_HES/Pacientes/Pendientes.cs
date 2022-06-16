@@ -16,13 +16,12 @@ namespace Sistema_HES
         {
             InitializeComponent();
             operador = lector.ReadLine().Split(',');
-            CargaVista();
             tabla = conexion.ObtenerDatos("select nombre from medico where ci=" + operador[1]);
+            CargaVista();
         }
         void CargaVista()
         {
-            if(tabla!=null)
-                DgwVista.DataSource = conexion.ObtenerDatos("select * form consulta where medico=\"" + tabla.Rows[0][0].ToString() + "\";");
+            DgwVista.DataSource = conexion.ObtenerDatos("select * from consulta where medico=\"" + tabla.Rows[0][0].ToString() + "\";");
         }
         private void DgwVista_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -33,7 +32,7 @@ namespace Sistema_HES
         {
             if(tabla!=null)
             {
-                conexion.SinRetorno("update consulta set estado=atendido where codigo=" + DgwVista.Rows[fila].Cells[0].Value.ToString());
+                conexion.SinRetorno("update consulta set estado= 'atendido' where codigo=" + DgwVista.Rows[fila].Cells[0].Value.ToString());
                 CargaVista();
             }
         }

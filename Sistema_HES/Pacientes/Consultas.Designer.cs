@@ -84,6 +84,7 @@ namespace Sistema_HES
             // TbxFecha
             // 
             this.TbxFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TbxFecha.Enabled = false;
             this.TbxFecha.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbxFecha.Location = new System.Drawing.Point(169, 149);
             this.TbxFecha.Name = "TbxFecha";
@@ -153,23 +154,6 @@ namespace Sistema_HES
             this.CbxHora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CbxHora.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxHora.FormattingEnabled = true;
-            this.CbxHora.Items.AddRange(new object[] {
-            "08:00",
-            "08:30",
-            "09:00",
-            "09:30",
-            "10:00",
-            "10:30",
-            "11:00",
-            "11:30",
-            "13:30",
-            "14:00",
-            "14:30",
-            "15:00",
-            "15:30",
-            "16:00",
-            "16:30",
-            "17:00"});
             this.CbxHora.Location = new System.Drawing.Point(435, 152);
             this.CbxHora.Name = "CbxHora";
             this.CbxHora.Size = new System.Drawing.Size(121, 28);

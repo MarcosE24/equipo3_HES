@@ -9,6 +9,7 @@ namespace Sistema_HES
         Conexion conexion = new Conexion();
         DateTime tiempo = new DateTime();
         string[] fecha;
+        int ci_medico=0;
         public Consultas()
         {
             InitializeComponent();
@@ -29,28 +30,56 @@ namespace Sistema_HES
 
         private void Calendario_DateSelected(object sender, DateRangeEventArgs e)
         {
-            tiempo = Calendario.SelectionStart;
-            if (tiempo>=DateTime.Now.Date)   //solo puede elegir desde la fecha actualen adelante
+            if ( ci_medico!= 0)
             {
-                MessageBox.Show("entra");
-                fecha = tiempo.ToString().Split(' ');
-                MessageBox.Show(fecha[0]);
-                TbxFecha.Text = fecha[0];
+                tiempo = Calendario.SelectionStart;
+                if (tiempo >= DateTime.Now.Date)   //solo puede elegir desde la fecha actualen adelante
+                {
+                    MessageBox.Show("entra");
+                    fecha = tiempo.ToString().Split(' ');
+                    MessageBox.Show(fecha[0]);
+                    TbxFecha.Text = fecha[0];
+                }
+                else
+                    MessageBox.Show("Por favor, seleccione una fecha correcta en adelante");
             }
+            else
+                MessageBox.Show("Antes de ingresar la fecha, por favor ingrese una especialidad");
+
+
         }
 
         void ObtenerHoras(object sender, EventArgs e)
         {
             int i;
-            CbxHora.Items.Clear();
-            DataTable tabla = conexion.ObtenerDatos("select * from disponibilidad where fecha=\"" + fecha[0] + "\";");
-            for (i = 0; i < 16; i++)
+            
+            if (conexion.VerificarDato(" select * from disponibilidad where fecha=" + fecha[0]))
             {
-                if (tabla.Rows[0][i + 2].ToString() == "libre")
-                { 
-                    CbxHora.Items.Add(Horas(i + 2));
+                CbxHora.Items.Clear();
+                DataTable tabla = conexion.ObtenerDatos("select * from disponibilidad where fecha=\"" + fecha[0] + "\";");
+                for (i = 0; i < 16; i++)
+                {
+                    if (tabla.Rows[0][i + 2].ToString() == "")
+                    {
+                        CbxHora.Items.Add(Horas(i + 2));
+                    }
                 }
             }
+            else
+            {
+                conexion.SinRetorno("insert into disponibilidad (fecha, id_medico) values (\"" + fecha[0] + "\"," + ci_medico + ");");
+                CbxHora.Items.Clear();
+                DataTable tabla = conexion.ObtenerDatos("select * from disponibilidad where fecha=\"" + fecha[0] + "\";");
+                for (i = 0; i < 16; i++)
+                {
+                    if (tabla.Rows[0][i + 2].ToString() == "")
+                    {
+                        CbxHora.Items.Add(Horas(i + 2));
+                    }
+                }
+            }
+                
+            
         }
 
         void CargarEspecialidad()
@@ -61,12 +90,6 @@ namespace Sistema_HES
             {
                 CbxEspecialidad.Items.Add(tabla.Rows[i][0].ToString());
             }
-        }
-        
-        void CargaMedicoSala()
-        {
-            DataTable tabla = conexion.ObtenerDatos("select nombre from medico where especialidad=\"" + CbxEspecialidad.Text + "\"");
-            LblDoctor.Text = tabla.Rows.ToString();
         }
 
         public string Horas(int i)
@@ -116,9 +139,10 @@ namespace Sistema_HES
 
         private void CargaMedicoSala(object sender, EventArgs e)
         {
-            DataTable tabla = conexion.ObtenerDatos("select nombre, sala from medico where especialidad=\"" + CbxEspecialidad.Text + "\"");
+            DataTable tabla = conexion.ObtenerDatos("select nombre, ci, sala from medico where especialidad=\"" + CbxEspecialidad.Text + "\"");
             LblDoctor.Text = tabla.Rows[0][0].ToString();
-            LblSala.Text = tabla.Rows[0][1].ToString();
+            LblSala.Text = tabla.Rows[0][2].ToString();
+            ci_medico = int.Parse(tabla.Rows[0][1].ToString());
         }
     }
 }
