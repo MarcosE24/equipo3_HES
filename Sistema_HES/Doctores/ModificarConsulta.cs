@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Sistema_HES
 {
@@ -11,10 +12,13 @@ namespace Sistema_HES
         DateTime tiempo = new DateTime();
         string[] fecha;
         string fechavieja;
-        
+        StreamReader lector = new StreamReader(@"Rol.txt");
+        string[] operador;
         public ModificarConsulta()
         {
             InitializeComponent();
+            operador = lector.ReadLine().Split(',');
+
         }
 
         private void ModificarConsulta_Load(object sender, EventArgs e)
@@ -26,7 +30,7 @@ namespace Sistema_HES
 
         void CargaVista()   //metodo que carga la vista de tabla
         {
-            DgwListaConsulta.DataSource = conexion.VistaTabla("select * from consulta where ci=12345 and estado=\"reservado\";");
+            DgwListaConsulta.DataSource = conexion.VistaTabla("select * from consulta where ci="+operador[1]+" and estado=\"reservado\";");
         }
         
         private void BtnEditar_Click(object sender, EventArgs e)
