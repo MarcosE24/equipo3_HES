@@ -34,10 +34,12 @@ namespace Sistema_HES
                 }
             }
         }
+        
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        
         private void DgwVista_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             fila = DgwVista.CurrentRow.Index;

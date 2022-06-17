@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
@@ -20,17 +13,13 @@ namespace Sistema_HES
         public Disponibilidad()
         {
             InitializeComponent();
+            operador = archivo.ReadLine().Split(',');
+            CargaVistaDias();
         }
         
-        private void Disponibilidad_Load(object sender, EventArgs e)
+        private void CargaVistaDias()
         {
-            
-            operador = archivo.ReadLine().Split(',');
-            
-            if (conexion.VerificarDato("select * from dias where ci=" + operador[1]))
-            {
-                DgwVistaDias.DataSource = conexion.ObtenerDatos("select * from dias where ci=" + operador[1]);
-            }
+            DgwVistaDias.DataSource = conexion.ObtenerDatos("select * from dias where ci=" + operador[1]);
         }
         
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -67,13 +56,11 @@ namespace Sistema_HES
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
-        { 
-            if (DgwVistaDias.CurrentCell == null)
-            {
-                MessageBox.Show("no hay nada en la celda");
-            }
-            else
-                MessageBox.Show(DgwVistaDias.CurrentCell.ToString());
+        {
+            string query = "delete from dias where id_dias=" + DgwVistaDias.CurrentRow.Cells[0].Value.ToString();
+            conexion.SinRetorno(query);
+            CargaVistaDias();
+            BtnEliminar.Enabled = false;
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)

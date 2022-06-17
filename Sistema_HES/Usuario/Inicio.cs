@@ -12,6 +12,7 @@ namespace Sistema_HES
         StreamReader lector = new StreamReader(@"Rol.txt");
         string[] operador;
         DataTable tabla;
+        
         public Inicio()
         {
             InitializeComponent();
@@ -38,6 +39,7 @@ namespace Sistema_HES
             FormHijo.BringToFront();
             FormHijo.Show();
         }
+        
         void  MostrarSubMenu(Panel SubMenu)     //funcion que muestra un sub menu y lo oculta si esta visible
         {
             if (SubMenu.Visible == false)
@@ -48,6 +50,7 @@ namespace Sistema_HES
             else
                 SubMenu.Visible = false;
         }
+        
         void OcultarSubMenu()   //funcion para ocultar un submenu
         {
             if (PnlSubAdministrar.Visible == true)

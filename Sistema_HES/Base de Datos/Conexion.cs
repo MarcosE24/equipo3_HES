@@ -9,8 +9,10 @@ namespace Sistema_HES
     public class Conexion   //Clase para la conexion con la base de datos
     {
         public MySqlConnection conexion = new MySqlConnection("server=localhost;database=sys_hes;uid=root;pwd=12345");
+        
         public Conexion()
         {
+
         }
 
         public bool Ini_Sesion(string ci, string contraseña,Label LblError)     //funcion que verifica en las tablas correspondientes si dicho usuario y contraseña son correctos o si existen

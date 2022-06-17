@@ -68,10 +68,10 @@
     <Compile Include="Administrador\GestionarMedico.Designer.cs">
       <DependentUpon>GestionarMedico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Doctores\GestionSala.cs">
+    <Compile Include="Administrador\GestionSala.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Doctores\GestionSala.Designer.cs">
+    <Compile Include="Administrador\GestionSala.Designer.cs">
       <DependentUpon>GestionSala.cs</DependentUpon>
     </Compile>
     <Compile Include="Pacientes\HistorialConsulta.cs">
@@ -92,28 +92,28 @@
     <Compile Include="Usuario\Logueo.Designer.cs">
       <DependentUpon>Logueo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Doctores\ModificarConsulta.cs">
+    <Compile Include="Pacientes\ModificarConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Doctores\ModificarConsulta.Designer.cs">
+    <Compile Include="Pacientes\ModificarConsulta.Designer.cs">
       <DependentUpon>ModificarConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\ModificarUsuario.cs">
+    <Compile Include="Usuario\ModificarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\ModificarUsuario.Designer.cs">
+    <Compile Include="Usuario\ModificarUsuario.Designer.cs">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pacientes\Paciente.cs">
+    <Compile Include="Doctores\Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pacientes\Paciente.Designer.cs">
+    <Compile Include="Doctores\Paciente.Designer.cs">
       <DependentUpon>Paciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pacientes\Pendientes.cs">
+    <Compile Include="Doctores\Pendientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pacientes\Pendientes.Designer.cs">
+    <Compile Include="Doctores\Pendientes.Designer.cs">
       <DependentUpon>Pendientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -133,7 +133,7 @@
     <EmbeddedResource Include="Administrador\GestionarMedico.resx">
       <DependentUpon>GestionarMedico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Doctores\GestionSala.resx">
+    <EmbeddedResource Include="Administrador\GestionSala.resx">
       <DependentUpon>GestionSala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pacientes\HistorialConsulta.resx">
@@ -145,16 +145,16 @@
     <EmbeddedResource Include="Usuario\Logueo.resx">
       <DependentUpon>Logueo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Doctores\ModificarConsulta.resx">
+    <EmbeddedResource Include="Pacientes\ModificarConsulta.resx">
       <DependentUpon>ModificarConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\ModificarUsuario.resx">
+    <EmbeddedResource Include="Usuario\ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pacientes\Paciente.resx">
+    <EmbeddedResource Include="Doctores\Paciente.resx">
       <DependentUpon>Paciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pacientes\Pendientes.resx">
+    <EmbeddedResource Include="Doctores\Pendientes.resx">
       <DependentUpon>Pendientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

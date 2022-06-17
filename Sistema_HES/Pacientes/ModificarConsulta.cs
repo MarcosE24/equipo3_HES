@@ -14,6 +14,7 @@ namespace Sistema_HES
         string fechavieja;
         StreamReader lector = new StreamReader(@"Rol.txt");
         string[] operador;
+        
         public ModificarConsulta()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace Sistema_HES
 
         }
 
-        private void ModificarConsulta_Load(object sender, EventArgs e)
+        private void ModificarConsulta_Load(object sender, EventArgs e)     //Funcion del envento Load del formulario
         {
             CargaVista();
             DgwListaConsulta.ClearSelection();
@@ -33,7 +34,7 @@ namespace Sistema_HES
             DgwListaConsulta.DataSource = conexion.VistaTabla("select * from consulta where ci="+operador[1]+" and estado=\"reservado\";");
         }
         
-        private void BtnEditar_Click(object sender, EventArgs e)
+        private void BtnEditar_Click(object sender, EventArgs e)        //Metodo para editar los datos de la consulta
         {
             int fila = DgwListaConsulta.CurrentRow.Index;
             if (BtnEditar.Text=="Editar")
@@ -94,7 +95,7 @@ namespace Sistema_HES
             }
         }
         
-        private void DgwListaConsulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgwListaConsulta_CellClick(object sender, DataGridViewCellEventArgs e)     //Evento desencadenado por el click a un campo en el DataGrid
         {
             if(BtnEditar.Enabled != true && BtnEliminar.Enabled != true)
             {
@@ -103,7 +104,7 @@ namespace Sistema_HES
             }
         }
 
-        private void BtnEliminar_Click(object sender, EventArgs e)
+        private void BtnEliminar_Click(object sender, EventArgs e)      //Metodo para Eliminar una consulta
         {
             int fila = DgwListaConsulta.CurrentRow.Index;
             conexion.SinRetorno("delete from consulta where codigo=" + DgwListaConsulta.Rows[fila].Cells[0].Value.ToString());
@@ -112,7 +113,7 @@ namespace Sistema_HES
             BtnEditar.Enabled = false;
         }
 
-        void CargarEspecialidad()
+        void CargarEspecialidad()       //Carga la especialidad en el CbxEspecialidad
         {
             int i;
             DataTable tabla = conexion.ObtenerDatos("select nombre from especialidad;");
@@ -122,7 +123,7 @@ namespace Sistema_HES
             }
         }
 
-        void ObtenerHoras()
+        void ObtenerHoras()     //Metodo para obtener las horas disponibles de los medicos
         {
             int i;
             CbxHora.Items.Clear();
@@ -131,7 +132,7 @@ namespace Sistema_HES
             {
                 for (i = 0; i < 16; i++)
                 {
-                    if (tabla.Rows[0][i + 2].ToString() == "libre")
+                    if (tabla.Rows[0][i + 2].ToString() == "")
                     {
                         CbxHora.Items.Add(consultas.Horas(i + 2));
                     }
@@ -146,7 +147,7 @@ namespace Sistema_HES
             }
         }
 
-        private void Calendario_DateSelected(object sender, DateRangeEventArgs e)
+        private void Calendario_DateSelected(object sender, DateRangeEventArgs e)       //Metodo en el cual se selecciona una fecha y compara que sea mayor a la fecha actual
         {
             tiempo = Calendario.SelectionStart;
             if (tiempo > DateTime.Now.Date)   //solo puede elegir desde la fecha actual en adelante
@@ -157,7 +158,7 @@ namespace Sistema_HES
             }
         }
         
-        bool FechaMargen()
+        bool FechaMargen()      //Metodo que verifica que la nueva fecha seleccionada sea por lo menos 48 horas antes de la fecha actual
         {
             DateTime fecha1 = Convert.ToDateTime(fechavieja.Replace('/', '-') + " 00:00:01");
             TimeSpan fechadif = fecha1 - DateTime.Now;
@@ -166,7 +167,7 @@ namespace Sistema_HES
             return false;
         }
 
-        private void BtnCerrar_Click(object sender, EventArgs e)
+        private void BtnCerrar_Click(object sender, EventArgs e)        //Metodo para cerrar el formulario
         {
             this.Close();
         }

@@ -171,7 +171,6 @@ namespace Sistema_HES
             this.Name = "Logueo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio Sesion";
-            this.MaximizedBoundsChanged += new System.EventHandler(this.Logueo_MaximizedBoundsChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

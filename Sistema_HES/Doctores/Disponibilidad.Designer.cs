@@ -341,7 +341,6 @@ namespace Sistema_HES
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Disponibilidad";
             this.Text = "Disponibilidad";
-            this.Load += new System.EventHandler(this.Disponibilidad_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
